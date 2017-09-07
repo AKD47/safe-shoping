@@ -39,8 +39,25 @@ gulp.task('css-libs', function () { // Создаем таск css-libs
     ]) // Берем источник
         .pipe(postcss(processors))// сжымаем
         .pipe(concat('libs.min.css'))// объеденяем в файл
-        .pipe(gulp.dest('css')) // Выгружаем результата в папку app/css
+        .pipe(gulp.dest('./static/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.stream({})); // Обновляем CSS на странице при изменении
+});
+
+gulp.task('js-libs', function () {
+    return gulp.src([ // Берем все необходимые библиотеки
+        'app/js-libs/jquery/jquery.min.js',
+        'app/js-libs/jquary-ui/jquery-ui.min.js',
+        'app/js-libs/bootstrap/bootstrap.min.js',
+        'app/js-libs/map/map.js',
+        'app/js-libs/fileinput/fileinput.js',
+        'app/js-libs/fancybox/jquery.fancybox.js',
+        'app/js-libs/owl/owl.carousel.min.js',
+        'app/js-libs/slick/slick.js',
+        'app/js-libs/validation/validation.js'
+    ])
+        .pipe(concat('vendors.js')) // Собираем их в кучу в новом файле libs.min.js
+        .pipe(uglify()) // Сжимаем JS файл
+        .pipe(gulp.dest('./static/js')); // Выгружаем в папку app/js
 });
 
 gulp.task('png-sprite', function () {// PNG Sprites
@@ -85,14 +102,14 @@ gulp.task('sass', function () { // Создаем таск Sass
         }))
         .pipe(sourcemaps.write('.', {sourceRoot: 'css-source'}))
         .pipe(plumber.stop())
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('./static/css'))
         .pipe(browserSync.stream({}));
 });
 
 gulp.task('browser-sync', function () { // Создаем таск browser-sync
     browserSync.init({ // Выполняем browserSync
         server: {
-            target: './' // Директория для сервера - app
+            baseDir: './layout' // Директория для сервера - app
         },
         ghostMode: {
             clicks: true,
@@ -106,14 +123,14 @@ gulp.task('browser-sync', function () { // Создаем таск browser-sync
 gulp.task('compress', ['clean'], function () {// Создаем таск compress
     return gulp.src('app/js/*.js')// Берем все необходимые библиотеки
         .pipe(plumber())
-        .pipe(concat('script.js'))// Собираем их в кучу в новом файле script.js
-        .pipe(rename({
+        .pipe(concat('common.js'))// Собираем их в кучу в новом файле script.js
+        /*.pipe(rename({
             suffix: ".min",// Добавляем суффикс .min
             extname: ".js"// Добавляем окончание .js
-        }))
+        }))*/
         .pipe(uglify()) // Сжимаем JS файл
         .pipe(plumber.stop())
-        .pipe(gulp.dest('js'))// Выгружаем в папку js
+        .pipe(gulp.dest('./static/js'))// Выгружаем в папку js
         .pipe(browserSync.stream({}));
 
 });
@@ -125,18 +142,18 @@ gulp.task("clean", function (cb) {
 gulp.task('extend-pages', function () {
     gulp.src('./app/html/pages/*.html')
         .pipe(extender({annotations: true, verbose: false})) // default options
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest('./layout/'))
         .pipe(browserSync.stream({}));
 });
 
 gulp.task('extend-blocks', function () {
     gulp.src('./app/html/*.html')
         .pipe(extender({annotations: true, verbose: false})) // default options
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest('./layout/'))
         .pipe(browserSync.stream({}));
 });
 
-gulp.task('watch', ['compress', 'extend-pages', 'css-libs', 'img', 'sass'], function () {
+gulp.task('watch', ['compress', 'extend-pages', 'css-libs', 'js-libs', 'img', 'sass'], function () {
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
     gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
@@ -155,7 +172,7 @@ gulp.task('img', function () {
             }],
             use: [pngquant()]
         })))
-        .pipe(gulp.dest('img'))
+        .pipe(gulp.dest('./static/i'))
         .pipe(browserSync.reload({
             stream: true
         }));
