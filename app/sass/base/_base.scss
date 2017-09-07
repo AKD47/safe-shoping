@@ -27,6 +27,13 @@ input{
     }
 }
 
+button{
+    outline: none;
+    &:hover, &:focus, &:active{
+        outline: none;
+    }
+}
+
 textarea{
     outline: none;
     &:hover, &:focus, &:active{

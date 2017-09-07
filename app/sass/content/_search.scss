@@ -10,4 +10,42 @@
     margin-top: 30px;
     margin-bottom: 24px;
   }
+  &__form{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (270px + 200px + 68px + 61px));
+    margin-top: 30px;
+    margin-bottom: 24px;
+    margin-left: 68px;
+    margin-right: 61px;
+    @include box-sizing(border-box);
+    border: 2px solid #c21a20;
+    border-radius: 32px;
+    overflow: hidden;
+    &--field{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - (30% + 74px));
+      border: none;
+      padding-left: 29px;
+      padding-top: 23px;
+    }
+    &--categories{
+      display: block;
+      position: relative;
+      float: left;
+      width: 30%;
+    }
+    &--submit{
+      display: block;
+      position: relative;
+      float: left;
+      width: 74px;
+      height: 46px;
+      background-color: #c12025;
+      border: none;
+    }
+  }
 }
