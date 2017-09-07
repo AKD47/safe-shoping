@@ -40,7 +40,7 @@ gulp.task('css-libs', function () { // Создаем таск css-libs
         .pipe(postcss(processors))// сжымаем
         .pipe(concat('libs.min.css'))// объеденяем в файл
         .pipe(gulp.dest('./static/css')) // Выгружаем результата в папку app/css
-        .pipe(browserSync.stream({})); // Обновляем CSS на странице при изменении
+        // .pipe(browserSync.stream({})); // Обновляем CSS на странице при изменении
 });
 
 gulp.task('js-libs', function () {
@@ -103,7 +103,7 @@ gulp.task('sass', function () { // Создаем таск Sass
         .pipe(sourcemaps.write('.', {sourceRoot: 'css-source'}))
         .pipe(plumber.stop())
         .pipe(gulp.dest('./static/css'))
-        .pipe(browserSync.stream({}));
+        /*.pipe(browserSync.stream({}));*/
 });
 
 gulp.task('browser-sync', function () { // Создаем таск browser-sync
@@ -130,8 +130,8 @@ gulp.task('compress', ['clean'], function () {// Создаем таск compres
         }))*/
         .pipe(uglify()) // Сжимаем JS файл
         .pipe(plumber.stop())
-        .pipe(gulp.dest('./static/js'))// Выгружаем в папку js
-        .pipe(browserSync.stream({}));
+        .pipe(gulp.dest('./static/js'));// Выгружаем в папку js
+        // .pipe(browserSync.stream({}));
 
 });
 
@@ -142,15 +142,15 @@ gulp.task("clean", function (cb) {
 gulp.task('extend-pages', function () {
     gulp.src('./app/html/pages/*.html')
         .pipe(extender({annotations: true, verbose: false})) // default options
-        .pipe(gulp.dest('./layout/'))
-        .pipe(browserSync.stream({}));
+        .pipe(gulp.dest('./layout/'));
+        // .pipe(browserSync.stream({}));
 });
 
 gulp.task('extend-blocks', function () {
     gulp.src('./app/html/*.html')
         .pipe(extender({annotations: true, verbose: false})) // default options
-        .pipe(gulp.dest('./layout/'))
-        .pipe(browserSync.stream({}));
+        .pipe(gulp.dest('./layout/'));
+        // .pipe(browserSync.stream({}));
 });
 
 gulp.task('watch', ['compress', 'extend-pages', 'css-libs', 'js-libs', 'img', 'sass'], function () {
@@ -172,17 +172,17 @@ gulp.task('img', function () {
             }],
             use: [pngquant()]
         })))
-        .pipe(gulp.dest('./static/i'))
-        .pipe(browserSync.reload({
+        .pipe(gulp.dest('./static/i'));
+        /*.pipe(browserSync.reload({
             stream: true
-        }));
+        }));*/
 });
 
 gulp.task('clear', function (callback) {
     return cache.clearAll();
 });
 
-gulp.task('default', ['watch', 'browser-sync']);
+gulp.task('default', ['watch']);
 
 /*
  npm i gulp gulp-sass browser-sync gulp-concat gulp-uglifyjs gulp-rename del gulp-imagemin imagemin-pngquant calipers-png calipers-jpeg calipers-gif gulp.spritesmith gulp-svgstore gulp-svgmin gulp-cache gulp-html-extend gulp-sourcemaps rimraf gulp-plumber gulp-postcss autoprefixer cssnano postcss-pxtorem postcss-px-to-em postcss-short stylefmt postcss-assets postcss-short-spacing postcss-focus postcss-sorting postcss-font-magician postcss-fixes stylelint-config-standard --save-dev*/
