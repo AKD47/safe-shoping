@@ -1,0 +1,43 @@
+.logo{
+  display: block;
+  position: relative;
+  float: left;
+  width: 270px;
+  height: 66px;
+  img{
+    size: 100%;
+    object-fit: contain;
+  }
+}
+.partner{
+  @include display-flex(flex);
+  @include justify-content(center);
+  position: relative;
+  float: left;
+  width: 200px;
+  border: 2px solid #c21a20;
+  border-radius: 32px;
+  padding-top: 16px;
+  padding-left: 21px;
+  padding-right: 22px;
+  padding-bottom: 13px;
+  @include box-sizing(border-box);
+  span{
+    display: block;
+    position: relative;
+    float: left;
+    &:last-of-type{
+      color: #0e0e0e;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 30px;
+      margin-left: 9px;
+    }
+  }
+  &:hover{
+    border: 2px solid #f0eded;
+    span:last-of-type{
+      color: #c21a20;
+    }
+  }
+}
