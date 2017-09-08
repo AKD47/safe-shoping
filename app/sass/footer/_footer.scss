@@ -105,4 +105,43 @@
       }
     }
   }
+  &__bottom{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding-top: 23px;
+    padding-bottom: 10px;
+    @include box-sizing(border-box);
+    p{
+      display: block;
+      position: relative;
+      float: left;
+      color: #0e0e0e;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 24px;
+    }
+  }
+  &__pay-sys{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(flex-end);
+    position: relative;
+    float: right;
+    > span{
+      display: block;
+      position: relative;
+      float: left;
+      max-width: 88px;
+      height: 22px;
+      overflow: hidden;
+      margin-left: 13px;
+      img{
+        object-fit: contain;
+      }
+    }
+  }
 }
