@@ -9,6 +9,12 @@
   .partner{
     margin-top: 30px;
     margin-bottom: 24px;
+    @include breakpoint(max-width 1024px){
+      margin-top: 0;
+    }
+    @include breakpoint(max-width 660px){
+      margin-left: calc(50%  - (200px/2));
+    }
   }
   &__form{
     display: block;
@@ -22,7 +28,15 @@
     @include box-sizing(border-box);
     border: 2px solid #c21a20;
     border-radius: 32px;
-    //overflow: hidden;
+    @include breakpoint(max-width 1024px){
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      border-radius: 0;
+    }
     &--field{
       display: block;
       position: relative;
@@ -35,7 +49,11 @@
       margin-left: 6px;
       border-top-left-radius: 32px;
       border-bottom-left-radius: 32px;
-      //padding-top: 23px;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+        border-radius: 0;
+        margin-left: 0;
+      }
     }
     &--categories{
       display: block;
@@ -45,6 +63,11 @@
       padding-left: 9px;
       @include box-sizing(border-box);
       cursor: pointer;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+        padding-left: 29px;
+        margin-bottom: 9px;
+      }
     }
     &--trigger{
       display: block;
@@ -112,6 +135,10 @@
       border: none;
       border-top-right-radius: 32px;
       border-bottom-right-radius: 32px;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+        border-radius: 0;
+      }
     }
   }
 }

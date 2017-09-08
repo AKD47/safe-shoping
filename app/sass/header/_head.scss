@@ -80,7 +80,7 @@
       @include breakpoint(max-width 992px){
         position: absolute;
         top: 15px;
-        right: 15px;
+        right: 0;
       }
     }
     &--enter{
@@ -95,7 +95,6 @@
       &:hover{
         color: #0e0e0e;
         text-decoration: none;
-       
       }
       &:first-of-type:before{
         display: block;
