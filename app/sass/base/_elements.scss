@@ -38,3 +38,24 @@
     }
   }
 }
+.rating{
+  display: block;
+  position: relative;
+  float: left;
+  width: 80px;
+  &__star{
+    display: block;
+    position: relative;
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin-right: 2px;
+    background-image: url('../i/icons/empty-star-icon.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+  &__star.rating__fil-star{
+    background-image: url('../i/icons/fill-star-icon.png');
+  }
+}
