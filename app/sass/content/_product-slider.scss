@@ -37,6 +37,51 @@
     position: relative;
     float: left;
     width: 100%;
+    margin-top: 47px;
+    margin-bottom: 126px;
+    .slick-prev{
+      display: block;
+      position: absolute;
+      content: '';
+      width: 24px;
+      height: 44px;
+      color: transparent;
+      border: none;
+      background-image: url('../i/icons/arrow-prev-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      &:before{
+        display: none;
+      }
+    }
+    .slick-next{
+      display: block;
+      position: absolute;
+      content: '';
+      width: 24px;
+      height: 44px;
+      color: transparent;
+      border: none;
+      background-image: url('../i/icons/arrow-prev-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      transform: rotate(180deg);
+      &:before{
+        display: none;
+      }
+    }
+    &--box {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-left: 61px;
+      padding-right: 61px;
+      @include box-sizing(border-box);
+      &:hover, &:focus, &:active {
+        outline: none;
+      }
+    }
     &--item {
       display: block;
       position: relative;
@@ -54,6 +99,9 @@
       &:hover {
         box-shadow: 0 0 6px rgba(1, 1, 1, 0.3);
         @include transition(0.4s);
+        .product-slider__carousel--tools {
+          display: block;
+        }
       }
       .rating {
         margin-top: -5px;
@@ -197,17 +245,61 @@
         -webkit-background-size: contain;
         background-size: contain;
       }
-      &:hover{
+      &:hover {
         color: #0e0e0e;
       }
     }
     &--tools {
-      display: block;
+      display: none;
       position: relative;
       float: left;
       width: 100%;
       border-top: 1px solid #eaeaea;
       margin-top: 22px;
+      > a {
+        display: block;
+        position: relative;
+        float: left;
+        width: 50%;
+        margin-top: 12px;
+        color: #848484;
+        font-size: 13px;
+        font-weight: 400;
+        padding-left: 22px;
+        @include box-sizing(border-box);
+        &:hover {
+          color: #848484;
+        }
+      }
+      > a:first-of-type:before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 13px;
+        height: 13px;
+        top: 3px;
+        left: 0;
+        overflow: hidden;
+        background-image: url('../i/icons/scales-sm-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
+      > a:last-of-type:before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 13px;
+        height: 12px;
+        top: 3px;
+        left: 0;
+        overflow: hidden;
+        background-image: url('../i/icons/wishlist-sm-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
     }
   }
 }
+
