@@ -14,4 +14,14 @@ $(document).ready(function () {
         $('.search__form--trigger .search__form--title').html(listText).attr('data-id', listAttr);
     });   
     /*close*/
+    
+    /*mobile menu*/
+    $(document).on('click', '#mobile-menu', function () {
+       event.preventDefault();       
+       var menu = $(this).next('.header__nav');
+       $(this).toggleClass('header__trigger--active'); 
+       menu.slideToggle('slow');
+        return false;
+    });
+    /*close*/
 });
