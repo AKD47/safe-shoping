@@ -22,21 +22,85 @@
     @include box-sizing(border-box);
     border: 2px solid #c21a20;
     border-radius: 32px;
-    overflow: hidden;
+    //overflow: hidden;
     &--field{
       display: block;
       position: relative;
       float: left;
-      width: calc(100% - (30% + 74px));
+      width: calc(100% - (35% + 74px + 6px));
+      height: 46px;
       border: none;
       padding-left: 29px;
+      padding-right: 20px;
+      margin-left: 6px;
+      border-top-left-radius: 32px;
+      border-bottom-left-radius: 32px;
       //padding-top: 23px;
     }
     &--categories{
       display: block;
       position: relative;
       float: left;
-      width: 30%;
+      width: 35%;
+      padding-left: 9px;
+      @include box-sizing(border-box);
+      cursor: pointer;
+    }
+    &--trigger{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+    }
+    &--title{
+      display: block;
+      position: relative;
+      float: left;
+      color: #414141;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 30px;
+      padding-top: 9px;
+      @include box-sizing(border-box);
+    }
+    &--arrow{
+      display: block;
+      position: relative;
+      float: left;
+      width: 7px;
+      height: 4px;
+      margin-top: 22px;
+      margin-left: 8px;
+      background-image: url('../i/icons/arrow-down-icon.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    &--list{
+      display: none;
+      position: absolute;
+      width: 100%;
+      top: 48px;
+      left: 0;
+      list-style: none;
+      padding-left: 0;
+      @include box-sizing(border-box);
+      box-shadow: 0 0 6px rgba(0,0,0,.22);
+      border-radius: 2px;
+      background-color: #fff;
+      z-index: 3;
+      > li{
+        position: relative;
+        float: left;
+        width: 100%;
+        color: #414141;
+        font-size: 14px;
+        font-weight: 400;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 9px;
+        @include box-sizing(border-box);
+        cursor: pointer;
+      }
     }
     &--submit{
       display: block;
@@ -46,6 +110,8 @@
       height: 46px;
       background-color: #c12025;
       border: none;
+      border-top-right-radius: 32px;
+      border-bottom-right-radius: 32px;
     }
   }
 }

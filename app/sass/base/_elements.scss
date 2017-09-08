@@ -17,10 +17,7 @@
   width: 200px;
   border: 2px solid #c21a20;
   border-radius: 32px;
-  padding-top: 16px;
-  padding-left: 21px;
-  padding-right: 22px;
-  padding-bottom: 13px;
+  padding: 12px 22px 6px 21px;
   @include box-sizing(border-box);
   span{
     display: block;

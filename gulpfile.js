@@ -43,23 +43,6 @@ gulp.task('css-libs', function () { // Создаем таск css-libs
         // .pipe(browserSync.stream({})); // Обновляем CSS на странице при изменении
 });
 
-gulp.task('js-libs', function () {
-    return gulp.src([ // Берем все необходимые библиотеки
-        'app/js-libs/jquery/jquery.min.js',
-        'app/js-libs/jquary-ui/jquery-ui.min.js',
-        'app/js-libs/bootstrap/bootstrap.min.js',
-        'app/js-libs/map/map.js',
-        'app/js-libs/fileinput/fileinput.js',
-        'app/js-libs/fancybox/jquery.fancybox.js',
-        'app/js-libs/owl/owl.carousel.min.js',
-        'app/js-libs/slick/slick.js',
-        'app/js-libs/validation/validation.js'
-    ])
-        .pipe(concat('vendors.js')) // Собираем их в кучу в новом файле libs.min.js
-        .pipe(uglify()) // Сжимаем JS файл
-        .pipe(gulp.dest('./static/js')); // Выгружаем в папку app/js
-});
-
 gulp.task('png-sprite', function () {// PNG Sprites
     var spriteData =
         gulp.src('app/img/sprites/*.*')// путь, откуда берем картинки для спрайта
@@ -153,7 +136,7 @@ gulp.task('extend-blocks', function () {
         // .pipe(browserSync.stream({}));
 });
 
-gulp.task('watch', ['compress', 'extend-pages', 'css-libs', 'js-libs', 'img', 'sass'], function () {
+gulp.task('watch', ['compress', 'extend-pages', 'css-libs', 'img', 'sass'], function () {
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
     gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
