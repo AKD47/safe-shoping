@@ -59,3 +59,56 @@
     background-image: url('../i/icons/fill-star-icon.png');
   }
 }
+.breadcrumbs{
+  @include display-flex(flex);
+  @include flex-wrap(wrap);
+  @include flex-direction(row);
+  @include justify-content(flex-start);
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 36px;
+  margin-bottom: 39px;
+  list-style: none;
+  padding: 0;
+  > li{
+    float: left;
+    margin-right: 39px;
+    &:after{
+      display: block;
+      position: absolute;
+      content: '';
+      top: 19px;
+      margin-left: -19px;
+      width: 3px;
+      height: 10px;
+      background-image: url('../i/icons/arrows-dividers-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+    a{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #0e0e0e;
+      font-size: 14px;
+      font-weight: 300;
+      padding-top: 13px;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-bottom: 9px;
+      @include box-sizing(border-box);
+      border-radius: 3px;
+      &:hover{
+        border-radius: 3px;
+        background-color: #f5f5f5;
+      }
+
+    }
+  }
+  > li:first-of-type:after{
+    display: none;
+  }
+}
