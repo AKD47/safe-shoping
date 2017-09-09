@@ -7,7 +7,7 @@
   @include box-sizing(border-box);
   .breadcrumbs {
     margin-top: 0;
-    width: calc(100% - 270px);
+    width: calc(100% - 272px);
     > li {
       margin-right: 0;
       &:after {
@@ -22,11 +22,11 @@
         background-image: none;
       }
     }
-    > li:first-of-type:after{
+    > li:first-of-type:after {
       display: none;
     }
   }
-  &__search{
+  &__search {
     display: block;
     position: relative;
     float: left;
@@ -36,7 +36,7 @@
     border-radius: 32px;
     background-color: #ffffff;
     overflow: hidden;
-    &--field{
+    &--field {
       display: block;
       position: relative;
       float: left;
@@ -50,7 +50,7 @@
       font-size: 14px;
       font-weight: 300;
     }
-    &--submit{
+    &--submit {
       display: block;
       position: relative;
       float: left;
@@ -61,6 +61,110 @@
       background-image: url('../i/icons/search-prod__icon.png');
       background-repeat: no-repeat;
       background-position: 16px 12px;
+    }
+  }
+  &__views {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    &--sliders {
+      display: block;
+      position: relative;
+      float: left;
+      width: 472px;
+    }
+    &--slider {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 408px;
+      overflow: hidden;
+    }
+    &--slide {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      img {
+        size: 100%;
+        object-fit: contain;
+      }
+      .favorite {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 48px;
+        height: 48px;
+        top: 15px;
+        right: 15px;
+        opacity: 0;
+        @include transition(0.4s);
+        background-color: #f8f5f6;
+        border-radius: 50%;
+        background-image: url('../i/icons/wishlist-icon.png');
+        background-repeat: no-repeat;
+        background-size: 26px 23px;
+        background-position: 10px 12px;
+      }
+      .compare {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 48px;
+        height: 48px;
+        top: 69px;
+        right: 15px;
+        opacity: 0;
+        @include transition(0.4s);
+        background-color: #f8f5f6;
+        border-radius: 50%;
+        background-image: url('../i/icons/scales-icon.png');
+        background-repeat: no-repeat;
+        background-size: 28px 28px;
+        background-position: 10px 12px;
+      }
+      &:hover {
+        .favorite, .compare {
+          opacity: 1;
+          @include transition(0.4s);
+        }
+      }
+    }
+    &--carousel {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 86px;
+      overflow: hidden;
+      margin-top: 16px;
+    }
+    &--carousel-item {
+      display: block;
+      position: relative;
+      float: left;
+      width: 86px;
+      height: 86px;
+      margin: 0 5px;
+      border: 1px solid #e4e4e4;
+      img{
+        size: 100%;
+        object-fit: cover;
+        &:hover, &:focus{
+          outline: none;
+        }
+      }
+      .slick-slide{
+        img{
+          &:hover, &:focus{
+            outline: none;
+          }
+        }
+      }
     }
   }
 }

@@ -59,4 +59,48 @@ $(document).ready(function () {
         ]
     });
     /*close*/
+    
+    /*single product slider*/
+    $('.product__views--slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.product__views--carousel'
+    });
+    $('.product__views--carousel').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.product__views--slider',
+        dots: false,
+        centerMode: true,
+        centerPadding: 0,
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 770,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 660,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+    /*close*/
 });
