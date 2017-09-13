@@ -42,6 +42,13 @@ textarea{
     }
 }
 
+select{
+    outline: none;
+    &:hover, &:focus, &:active{
+        outline: none;
+    }
+}
+
 %clearfix {
     *zoom: 1;
     &:after {

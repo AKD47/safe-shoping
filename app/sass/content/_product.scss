@@ -225,12 +225,47 @@
         background-size: contain;
       }
     }
-    &--element{
+    &--rating{
       display: block;
       position: relative;
       float: left;
       width: 100%;
       margin-bottom: 27px;
+      > .rating{
+        width: 135px;
+        > .rating__star{
+          width: 19px;
+          height: 19px;
+          margin-right: 8px;
+          background-image: url('../i/icons/empty-big-star-icon.png');
+        }
+        > .rating__star.rating__fil-star{
+          background-image: url('../i/icons/filed-big-star-icon.png');
+        }
+      }
+      > .more-rew{
+        display: block;
+        position: relative;
+        float: left;
+        width: calc(100% - 135px);
+        color: #1179c2;
+        font-size: 14px;
+        font-weight: 300;
+        text-decoration: underline;
+        &:hover{
+          color: #1179c2;
+          text-decoration: none;
+        }
+      }
+    }
+    &--element{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 0;
+      padding: 2px 0;
+      @include box-sizing(border-box);
       &:after{
         display: block;
         position: absolute;
@@ -239,11 +274,11 @@
         height: 2px;
         border-bottom: 1px dotted #6e6e6e;
         left: 0;
-        bottom: -13px;
+        bottom: 0;
       }
     }
     &--element:last-of-type:after{
-      bottom: -32px;
+      bottom: -7px;
     }
     &--property{
       display: block;
@@ -253,6 +288,7 @@
       color: #7a7a7a;
       font-size: 13px;
       font-weight: 300;
+      line-height: 35px;
     }
     &--value{
       display: block;
@@ -263,6 +299,24 @@
       color: black;
       font-size: 13px;
       font-weight: 400;
+      line-height: 35px;
+    }
+    &--select{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 33px;
+      background-color: white;
+      border: 1px solid #e4e4e4;
+      border-radius: 18px;
+      padding-left: 20px;
+      padding-right: 18px;
+      @include box-sizing(border-box);
+      color: #1f1f1f;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 40px;
     }
     &--banner{
       display: block;
