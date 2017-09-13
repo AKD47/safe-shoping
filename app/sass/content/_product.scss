@@ -166,5 +166,115 @@
         }
       }
     }
+    &--tools{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - (472px + 272px + 2px));
+      padding: 0 30px;
+      @include box-sizing(border-box);
+    }
+    &--name{
+      display: block;
+      display: -webkit-box;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #0e0e0e;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.4;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &--articul{
+      display: block;position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 14px;
+      color: #747474;
+      font-size: 14px;
+      font-weight: 300;
+    }
+    &--alter{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 24px;
+      color: black;
+      font-size: 14px;
+      font-weight: 300;
+      padding-left: 28px;
+      @include box-sizing(border-box);
+      &:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 19px;
+        height: 19px;
+        top: 0;
+        left: 0;
+        background-image: url('../i/icons/teg-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
+    }
+    &--element{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 27px;
+      &:after{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 2px;
+        border-bottom: 1px dotted #6e6e6e;
+        left: 0;
+        bottom: -13px;
+      }
+    }
+    &--element:last-of-type:after{
+      bottom: -32px;
+    }
+    &--property{
+      display: block;
+      position: relative;
+      float: left;
+      width: 50%;
+      color: #7a7a7a;
+      font-size: 13px;
+      font-weight: 300;
+    }
+    &--value{
+      display: block;
+      position: relative;
+      float: left;
+      width: 50%;
+      text-align: right;
+      color: black;
+      font-size: 13px;
+      font-weight: 400;
+    }
+    &--banner{
+      display: block;
+      position: relative;
+      float: left;
+      width: 272px;
+      height: 403px;
+      border: 1px solid #e4e4e4;
+      img{
+        size: 100%;
+        object-fit: cover;
+      }
+    }
   }
 }
