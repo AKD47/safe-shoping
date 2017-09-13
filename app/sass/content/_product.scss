@@ -8,7 +8,7 @@
   .breadcrumbs {
     margin-top: 0;
     width: calc(100% - 272px);
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       width: 100%;
       margin-bottom: 15px;
     }
@@ -40,7 +40,7 @@
     border-radius: 32px;
     background-color: #ffffff;
     overflow: hidden;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 660px) {
       width: 100%;
       margin-bottom: 15px;
     }
@@ -81,7 +81,7 @@
       position: relative;
       float: left;
       width: 472px;
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         width: 100%;
       }
     }
@@ -92,8 +92,8 @@
       width: 100%;
       height: 408px;
       overflow: hidden;
-      @include breakpoint(max-width 660px){
-       height: 320px;
+      @include breakpoint(max-width 660px) {
+        height: 320px;
       }
     }
     &--slide {
@@ -187,7 +187,7 @@
       width: calc(100% - (472px + 272px + 2px));
       padding: 0 30px;
       @include box-sizing(border-box);
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         width: 100%;
       }
     }
@@ -343,11 +343,11 @@
       width: 272px;
       height: 403px;
       border: 1px solid #e4e4e4;
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         margin-top: 15px;
         margin-bottom: 15px;
       }
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         margin-top: 15px;
         margin-bottom: 15px;
         width: 100%;
@@ -365,12 +365,12 @@
       width: calc(100% - 472px);
       padding-left: 30px;
       @include box-sizing(border-box);
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         width: calc(100% - 274px);
         margin-top: 15px;
         margin-bottom: 15px;
       }
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         width: 100%;
         margin-top: 15px;
         margin-bottom: 15px;
@@ -391,11 +391,11 @@
         }
       }
     }
-    &--to-basket{
+    &--to-basket {
       display: block;
       position: relative;
       float: left;
-      .old-price{
+      .old-price {
         display: block;
         position: relative;
         float: left;
@@ -406,8 +406,13 @@
         color: #9b9b9b;
         font-size: 14px;
         text-decoration: line-through;
+        @include breakpoint(max-width 660px) {
+          text-align: center;
+          width: 100%;
+          margin: 15px 0;
+        }
       }
-      .new-price{
+      .new-price {
         display: block;
         position: relative;
         float: left;
@@ -417,9 +422,15 @@
         font-weight: 400;
         color: #373737;
         font-size: 19px;
+        @include breakpoint(max-width 660px) {
+          font-size: 22px;
+          text-align: center;
+          width: 100%;
+          margin-bottom: 15px;
+        }
       }
     }
-    &--counter{
+    &--counter {
       display: block;
       position: relative;
       float: left;
@@ -431,7 +442,11 @@
       border: 1px solid #e4e4e4;
       border-radius: 19px;
       overflow: hidden;
-      .number{
+      @include breakpoint(max-width 660px) {
+        width: 100%;
+        height: 50px;
+      }
+      .number {
         display: block;
         position: relative;
         float: left;
@@ -443,8 +458,11 @@
         border-top-left-radius: 19px;
         border-bottom-left-radius: 19px;
         text-align: center;
+        @include breakpoint(max-width 660px) {
+          width: 200px;
+        }
       }
-      .plus{
+      .plus {
         display: block;
         position: absolute;
         width: 27px;
@@ -458,8 +476,13 @@
         background-size: 6px 5px;
         background-position: 10px 7px;
         cursor: pointer;
+        @include breakpoint(max-width 660px) {
+          width: 68px;
+          height: 25px;
+          background-size: 15px 15px;
+        }
       }
-      .minus{
+      .minus {
         display: block;
         position: absolute;
         width: 27px;
@@ -472,9 +495,14 @@
         background-size: 6px 5px;
         background-position: 10px 7px;
         cursor: pointer;
+        @include breakpoint(max-width 660px) {
+          width: 68px;
+          height: 25px;
+          background-size: 15px 15px;
+        }
       }
     }
-    &--submit{
+    &--submit {
       display: block;
       position: relative;
       float: left;
@@ -487,8 +515,13 @@
       font-size: 14px;
       font-weight: 300;
       margin-top: 7px;
+      @include breakpoint(max-width 660px) {
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
     }
-    &--coins{
+    &--coins {
       display: block;
       position: relative;
       float: left;
@@ -500,7 +533,7 @@
       color: #464646;
       font-size: 13px;
       font-weight: 300;
-      &:before{
+      &:before {
         display: block;
         position: absolute;
         content: '';
@@ -514,20 +547,20 @@
         background-size: contain;
       }
     }
-    &--social{
+    &--social {
       @include display-flex(flex);
       @include flex-wrap(wrap);
       @include flex-direction(row);
       @include justify-content(flex-end);
       position: relative;
       float: right;
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         width: 100%;
         margin-top: 15px;
         margin-bottom: 15px;
         @include justify-content(center);
       }
-      > a{
+      > a {
         @include display-flex(flex);
         @include flex-wrap(wrap);
         @include justify-content(center);
@@ -540,19 +573,19 @@
         border-radius: 50%;
         border: 1px solid #cacaca;
         color: #c8c8c8;
-        &:hover{
+        &:hover {
           color: #ca3f43;
           border: 1px solid #ca3f43;
         }
       }
     }
   }
-  &__descr{
+  &__descr {
     display: block;
     position: relative;
     float: left;
     width: 100%;
-    &--tabs{
+    &--tabs {
       @include display-flex(flex);
       @include flex-wrap(wrap);
       @include flex-direction(row);
@@ -565,16 +598,16 @@
       margin-bottom: 37px;
       padding: 0;
       background-color: #f7f7f7;
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         margin-top: 15px;
         margin-bottom: 15px;
       }
-      li{
+      li {
         float: left;
-        @include breakpoint(max-width 660px){
+        @include breakpoint(max-width 660px) {
           width: 100%;
         }
-        a{
+        a {
           display: block;
           position: relative;
           float: left;
@@ -584,31 +617,31 @@
           color: #000000;
           font-size: 14px;
           font-weight: 300;
-          @include breakpoint(max-width 660px){
+          @include breakpoint(max-width 660px) {
             padding: 15px 10px;
           }
-          &:hover{
+          &:hover {
             font-weight: 700;
           }
         }
-        a.active{
+        a.active {
           color: #000000;
           font-weight: 700;
         }
       }
     }
-    &--wrapper{
+    &--wrapper {
       display: block;
       position: relative;
       float: left;
       width: 100%;
     }
-    &--box{
+    &--box {
       display: block;
       position: relative;
       float: left;
       width: 100%;
-      p{
+      p {
         display: block;
         position: relative;
         float: left;
@@ -619,7 +652,7 @@
         line-height: 40px;
         margin-top: 0;
         margin-bottom: 24px;
-        @include breakpoint(max-width 660px){
+        @include breakpoint(max-width 660px) {
           line-height: 22px;
           margin-bottom: 10px;
         }
