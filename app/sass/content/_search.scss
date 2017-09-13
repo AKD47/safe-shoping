@@ -46,6 +46,7 @@
       border: none;
       padding-left: 29px;
       padding-right: 20px;
+      @include box-sizing(border-box);
       margin-left: 6px;
       border-top-left-radius: 32px;
       border-bottom-left-radius: 32px;

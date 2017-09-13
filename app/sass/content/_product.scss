@@ -8,6 +8,10 @@
   .breadcrumbs {
     margin-top: 0;
     width: calc(100% - 272px);
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      margin-bottom: 15px;
+    }
     > li {
       margin-right: 0;
       &:after {
@@ -36,6 +40,10 @@
     border-radius: 32px;
     background-color: #ffffff;
     overflow: hidden;
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      margin-bottom: 15px;
+    }
     &--field {
       display: block;
       position: relative;
@@ -73,6 +81,9 @@
       position: relative;
       float: left;
       width: 472px;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
     }
     &--slider {
       display: block;
@@ -81,6 +92,9 @@
       width: 100%;
       height: 408px;
       overflow: hidden;
+      @include breakpoint(max-width 660px){
+       height: 320px;
+      }
     }
     &--slide {
       display: block;
@@ -173,6 +187,9 @@
       width: calc(100% - (472px + 272px + 2px));
       padding: 0 30px;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 992px){
+        width: 100%;
+      }
     }
     &--name {
       display: block;
@@ -326,6 +343,16 @@
       width: 272px;
       height: 403px;
       border: 1px solid #e4e4e4;
+      @include breakpoint(max-width 992px){
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      @include breakpoint(max-width 660px){
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 320px;
+      }
       img {
         size: 100%;
         object-fit: cover;
@@ -338,6 +365,16 @@
       width: calc(100% - 472px);
       padding-left: 30px;
       @include box-sizing(border-box);
+      @include breakpoint(max-width 992px){
+        width: calc(100% - 274px);
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      @include breakpoint(max-width 660px){
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
       > h3 {
         display: block;
         position: relative;
@@ -389,6 +426,7 @@
       width: 68px;
       height: 33px;
       margin-top: 4px;
+      margin-right: 9px;
       background-color: white;
       border: 1px solid #e4e4e4;
       border-radius: 19px;
@@ -434,6 +472,157 @@
         background-size: 6px 5px;
         background-position: 10px 7px;
         cursor: pointer;
+      }
+    }
+    &--submit{
+      display: block;
+      position: relative;
+      float: left;
+      width: 163px;
+      height: 31px;
+      background-color: #cb3d41;
+      border: none;
+      border-radius: 19px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 300;
+      margin-top: 7px;
+    }
+    &--coins{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 7px;
+      margin-bottom: 0;
+      padding-left: 30px;
+      @include box-sizing(border-box);
+      color: #464646;
+      font-size: 13px;
+      font-weight: 300;
+      &:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 18px;
+        top: 0;
+        left: 0;
+        background-image: url('../i/icons/coin-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
+    }
+    &--social{
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(flex-end);
+      position: relative;
+      float: right;
+      @include breakpoint(max-width 992px){
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        @include justify-content(center);
+      }
+      > a{
+        @include display-flex(flex);
+        @include flex-wrap(wrap);
+        @include justify-content(center);
+        @include align-items(center);
+        position: relative;
+        float: left;
+        width: 45px;
+        height: 45px;
+        margin-left: 13px;
+        border-radius: 50%;
+        border: 1px solid #cacaca;
+        color: #c8c8c8;
+        &:hover{
+          color: #ca3f43;
+          border: 1px solid #ca3f43;
+        }
+      }
+    }
+  }
+  &__descr{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    &--tabs{
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(flex-start);
+      position: relative;
+      float: left;
+      width: 100%;
+      list-style: none;
+      margin-top: 40px;
+      margin-bottom: 37px;
+      padding: 0;
+      background-color: #f7f7f7;
+      @include breakpoint(max-width 660px){
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      li{
+        float: left;
+        @include breakpoint(max-width 660px){
+          width: 100%;
+        }
+        a{
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          padding: 25px 22px;
+          @include box-sizing(border-box);
+          color: #000000;
+          font-size: 14px;
+          font-weight: 300;
+          @include breakpoint(max-width 660px){
+            padding: 15px 10px;
+          }
+          &:hover{
+            font-weight: 700;
+          }
+        }
+        a.active{
+          color: #000000;
+          font-weight: 700;
+        }
+      }
+    }
+    &--wrapper{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+    }
+    &--box{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      p{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        color: #000000;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 40px;
+        margin-top: 0;
+        margin-bottom: 24px;
+        @include breakpoint(max-width 660px){
+          line-height: 22px;
+          margin-bottom: 10px;
+        }
       }
     }
   }

@@ -53,7 +53,8 @@ $(document).ready(function () {
                 breakpoint: 660,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    arrows: false  
                 }
             }            
         ]
@@ -89,14 +90,14 @@ $(document).ready(function () {
             {
                 breakpoint: 770,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToShow: 4,
+                    slidesToScroll: 1
                 }
             },
             {
                 breakpoint: 660,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 3,
                     slidesToScroll: 1
                 }
             }
@@ -131,4 +132,21 @@ $(document).ready(function () {
         return false;
     });
     /*close*/
+
+    /*product tabs*/
+    $('.product__descr--box').each(function (i) {
+        if (i != 0) {
+            $(this).hide(0)
+        }
+    });
+    $(document).on('click', '.product__descr--tabs a', function (e) {
+        e.preventDefault();
+        var tabId = $(this).attr('href');
+        $('.product__descr--tabs a').removeClass('active');
+        $(this).addClass('active');
+        $('.product__descr--box').hide(0);
+        $(tabId).fadeIn();
+    });
+    /*close*/
+    
 });

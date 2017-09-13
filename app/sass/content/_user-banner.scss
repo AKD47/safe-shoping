@@ -15,6 +15,9 @@
       position: relative;
       float: left;
       width: calc(100% - 273px);
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
     }
     &--foto{
       display: block;

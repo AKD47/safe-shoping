@@ -14,6 +14,7 @@ body{
 }
 
 a {
+    cursor: pointer;
     text-decoration: none;
     &:hover, &:focus, &:active{
         text-decoration: none;
@@ -29,6 +30,7 @@ input{
 }
 
 button{
+    cursor: pointer;
     outline: none;
     &:hover, &:focus, &:active{
         outline: none;
