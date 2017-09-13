@@ -151,22 +151,22 @@
       height: 86px;
       margin: 0 5px;
       border: 1px solid #e4e4e4;
-      img{
+      img {
         size: 100%;
         object-fit: cover;
-        &:hover, &:focus{
+        &:hover, &:focus {
           outline: none;
         }
       }
-      .slick-slide{
-        img{
-          &:hover, &:focus{
+      .slick-slide {
+        img {
+          &:hover, &:focus {
             outline: none;
           }
         }
       }
     }
-    &--tools{
+    &--tools {
       display: block;
       position: relative;
       float: left;
@@ -174,7 +174,7 @@
       padding: 0 30px;
       @include box-sizing(border-box);
     }
-    &--name{
+    &--name {
       display: block;
       display: -webkit-box;
       position: relative;
@@ -191,8 +191,9 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    &--articul{
-      display: block;position: relative;
+    &--articul {
+      display: block;
+      position: relative;
       float: left;
       width: 100%;
       margin-top: 14px;
@@ -200,7 +201,7 @@
       font-size: 14px;
       font-weight: 300;
     }
-    &--alter{
+    &--alter {
       display: block;
       position: relative;
       float: left;
@@ -211,7 +212,7 @@
       font-weight: 300;
       padding-left: 28px;
       @include box-sizing(border-box);
-      &:before{
+      &:before {
         display: block;
         position: absolute;
         content: '';
@@ -225,25 +226,25 @@
         background-size: contain;
       }
     }
-    &--rating{
+    &--rating {
       display: block;
       position: relative;
       float: left;
       width: 100%;
       margin-bottom: 27px;
-      > .rating{
+      > .rating {
         width: 135px;
-        > .rating__star{
+        > .rating__star {
           width: 19px;
           height: 19px;
           margin-right: 8px;
           background-image: url('../i/icons/empty-big-star-icon.png');
         }
-        > .rating__star.rating__fil-star{
+        > .rating__star.rating__fil-star {
           background-image: url('../i/icons/filed-big-star-icon.png');
         }
       }
-      > .more-rew{
+      > .more-rew {
         display: block;
         position: relative;
         float: left;
@@ -252,13 +253,13 @@
         font-size: 14px;
         font-weight: 300;
         text-decoration: underline;
-        &:hover{
+        &:hover {
           color: #1179c2;
           text-decoration: none;
         }
       }
     }
-    &--element{
+    &--element {
       display: block;
       position: relative;
       float: left;
@@ -266,7 +267,7 @@
       margin-bottom: 0;
       padding: 2px 0;
       @include box-sizing(border-box);
-      &:after{
+      &:after {
         display: block;
         position: absolute;
         content: '';
@@ -277,10 +278,10 @@
         bottom: 0;
       }
     }
-    &--element:last-of-type:after{
+    &--element:last-of-type:after {
       bottom: -7px;
     }
-    &--property{
+    &--property {
       display: block;
       position: relative;
       float: left;
@@ -290,7 +291,7 @@
       font-weight: 300;
       line-height: 35px;
     }
-    &--value{
+    &--value {
       display: block;
       position: relative;
       float: left;
@@ -301,7 +302,7 @@
       font-weight: 400;
       line-height: 35px;
     }
-    &--select{
+    &--select {
       display: block;
       position: relative;
       float: left;
@@ -318,16 +319,39 @@
       font-weight: 300;
       line-height: 40px;
     }
-    &--banner{
+    &--banner {
       display: block;
       position: relative;
       float: left;
       width: 272px;
       height: 403px;
       border: 1px solid #e4e4e4;
-      img{
+      img {
         size: 100%;
         object-fit: cover;
+      }
+    }
+    &--prices {
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - 472px);
+      padding-left: 30px;
+      @include box-sizing(border-box);
+      > h3 {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 19px;
+        margin-bottom: 0;
+        color: black;
+        font-size: 18px;
+        font-weight: 300;
+        span {
+          color: #9b9b9b;
+          font-size: 14px;
+        }
       }
     }
   }
