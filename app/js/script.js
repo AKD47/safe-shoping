@@ -91,13 +91,16 @@ $(document).ready(function () {
                 breakpoint: 770,
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    slidesToShow: 2,
+                    slidesToScroll: 2
                 }
             },
             {
                 breakpoint: 660,
                 settings: {
                     slidesToShow: 3,
+                    slidesToShow: 1,
                     slidesToScroll: 1
                 }
             }
@@ -147,6 +150,6 @@ $(document).ready(function () {
         $('.product__descr--box').hide(0);
         $(tabId).fadeIn();
     });
-    /*close*/
-    
+    /*close*/    
+
 });
