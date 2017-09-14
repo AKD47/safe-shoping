@@ -50,6 +50,20 @@
       margin-top: 15px;
       margin-bottom: 0;
     }
+    > li {
+      > ul{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin-top: 23px;
+        @include breakpoint(max-width 770px){
+          margin-top: 15px;
+        }
+      }
+    }
   }
   &__nav{
     display: block;
