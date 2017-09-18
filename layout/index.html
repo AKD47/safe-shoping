@@ -27,22 +27,28 @@
 
                 <div class="header__top-links--region">
                     <span>Ваш регион:</span>
-                    <a href="#">Москва</a>
+                    <a href="#" class="city-select">Москва</a>
                 </div>
 
                 <div class="header__top-links--tools">
 
                     <a href="#" class="element">
-                        <span class="icon"><img src="../static/i/icons/coin-icon.png" alt=""></span>
-                        Монетки (<span class="value">57 026</span>)</a>
+                        <span class="icon">
+                            <img src="../static/i/icons/coin-icon.png" alt="">
+                        </span>
+                        <span class="counter">99</span>
+                        Монетки <!--(<span class="value">57 026</span>)--></a>
                     <a href="#" class="element">
                         <span class="icon"><img src="../static/i/icons/wishlist-icon.png" alt=""></span>
-                        Избранное (<span class="value">9</span>)</a>
+                        <span class="counter">99</span>
+                        Избранное <!--(<span class="value">9</span>)--></a>
                     <a href="#" class="element">
                         <span class="icon"><img src="../static/i/icons/scales-icon.png" alt=""></span>
-                        Сравнение (<span class="value">1</span>)</a>
+                        <span class="counter">99</span>
+                        Сравнение <!--(<span class="value">1</span>)--></a>
                     <a href="#" class="element">
                         <span class="icon"><img src="../static/i/icons/basket-icon.png" alt=""></span>
+                        <span class="counter">99</span>
                         <span class="value">12 350</span>руб.</a>
 
                 </div>
@@ -64,7 +70,7 @@
 
     <div class="container">
 
-        <a href="/" class="logo">
+        <a href="index.html" class="logo">
             <img src="../static/i/logo.png" alt="">
         </a>
 
@@ -191,762 +197,942 @@
 
 <!-- end header.html-->
 
-<!-- start user-banner.html-->
-<section class="user-banner">
-
+<!-- start top-banner.html-->
+<section class="top-banner">
+    
     <div class="container">
+        
+        <a href="#" class="top-banner__big">
+            <img src="../static/i/banners/top-banner_1.png" alt="">
+        </a>
+        
+        <a href="" class="top-banner__sm">
+            <img src="../static/i/banners/top-banner_2.png" alt="">
+        </a>
 
-<!-- start breadcrumbs.html-->
-<ul class="breadcrumbs">
-    <li><a href="#">Главная</a></li>
-    <li><a href="#">Электроника и связь</a></li>
-    <li><a href="#">Телефоны</a></li>
-    <li><a href="#">Смартфоны</a></li>
-</ul>
-
-<!-- end breadcrumbs.html-->
-
-        <div class="user-banner__descr">
-
-            <div class="user-banner__descr--fotos">
-
-                <div class="user-banner__descr--foto">
-
-                </div>
-
-            </div>
-
-            <div class="user-banner__descr--about">
-
-                <h3 class="title">Информация о продавце</h3>
-
-                <div class="element">
-                    <p>Кол-во сделок:</p><span>345</span>
-                </div>
-                <div class="element">
-                    <p>Рейтинг:</p><span>99.5%</span>
-                </div>
-                <div class="element">
-                    <p>Зарегистрирован:</p><span>20.10.2016</span>
-                </div>
-                <div class="element">
-                    <p>Город:</p><span> Москва</span>
-                </div>
-
-            </div>
-
-
-        </div>
-
+        <a href="" class="top-banner__links">
+            <img src="../static/i/banners/top-banner_links.png" alt="">
+        </a>
+        
     </div>
-
+    
 </section>
-<!-- end user-banner.html-->
+<!-- end top-banner.html-->
 
-<!-- start product.html-->
 <section class="product">
 
     <div class="container">
 
-        <ul class="breadcrumbs">
-            <li><a href="#">Носки</a></li>
-            <li><a href="#">Трусы</a></li>
-            <li><a href="#">Перчатки</a></li>
-            <li><a href="#">Шарфы</a></li>
-            <li><a href="#">Все товары</a></li>
-        </ul>
+        <a href="single-product.html" class="product__stock">
 
-        <form class="product__search" action="">
-            <input class="product__search--field" type="text" placeholder="Поиск в этом магазине">
-            <button class="product__search--submit"></button>
-        </form>
+            <p class="product__stock--title">Распродажа</p>
 
-        <div class="product__views">
+            <p class="product__stock--value">Скидка <br>
+                <span class="val">-30%</span>
+            </p>
 
-            <div class="product__views--sliders">
+            <div class="product__stock--photo">
+                <img src="../static/i/goods/produck_stock.png" alt="">
+            </div>
 
-                <div class="product__views--slider">
+            <h3 class="product-slider__carousel--name">Microsoft Xbox One S Wireless Controller</h3>
 
-                    <div class="product__views--slide">
+            <p class="product-slider__carousel--old-price">4 990 р.</p>
 
-                        <a href="../static/i/goods/product_1.png" data-fancybox="gallery">
-                            <img src="../static/i/goods/product_1.png" alt="">
-                        </a>
+            <p class="product-slider__carousel--new-price">3 490 р.</p>
 
-                        <a class="favorite" href="#"></a>
+            <div class="product__stock--quantity">
 
-                        <a class="compare" href="#"></a>
+                <div class="product__stock--quantity-number">Осталось: <span class="val">12</span></div>
+                <div class="product__stock--quantity-number">Уже продано: <span class="val">28</span></div>
 
-                    </div>
+                <div class="product__stock--quantity-line">
+                    <span class="product__stock--quantity-fillline"></span>
+                </div>
 
-                    <div class="product__views--slide">
+            </div>
 
-                        <a href="../static/i/goods/product_1.png" data-fancybox="gallery">
-                            <img src="../static/i/goods/product_1.png" alt="">
-                        </a>
+            <div class="product__stock--countdown">
 
-                        <a class="favorite" href="#"></a>
+                <p>Спешите! Время на исходе:</p>
 
-                        <a class="compare" href="#"></a>
+                <div class="product__stock--countdown-clock" data-date="16 november 2017 12:00:00">
 
-                    </div>
+                    <ul id="countdown">
+                        <li>
+                            <p class="timeRefHours">часы</p>
+                            <span class="hours">00</span>
+                        </li>
+                        <li>
+                            <p class="timeRefMinutes">минуты</p>
+                            <span class="minutes">00</span>
+                        </li>
+                        <li>
+                            <p class="timeRefSeconds">секунды</p>
+                            <span class="seconds">00</span>
+                        </li>
+                    </ul>
+                </div>
 
-                    <div class="product__views--slide">
+            </div>
 
-                        <a href="../static/i/goods/product_1.png" data-fancybox="gallery">
-                            <img src="../static/i/goods/product_1.png" alt="">
-                        </a>
+        </a>
 
-                        <a class="favorite" href="#"></a>
+        <div class="product__items">
 
-                        <a class="compare" href="#"></a>
+            <ul class="product__descr--tabs">
+                <li><a href="#new-items" class="active">Новинки</a></li>
+                <li><a href="#bestsellers">Хиты продаж</a></li>
+                <li><a href="#discounts">Скидки</a></li>
+            </ul>
 
-                    </div>
+            <div class="product__descr--wrapper">
 
-                    <div class="product__views--slide">
+                <div id="new-items" class="product__descr--box">
 
-                        <a href="../static/i/goods/product_1.png" data-fancybox="gallery">
-                            <img src="../static/i/goods/product_1.png" alt="">
-                        </a>
+                    <div class="product__box">
 
-                        <a class="favorite" href="#"></a>
+                        <div class="product-slider__carousel--item">
 
-                        <a class="compare" href="#"></a>
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
 
-                    </div>
+                            <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
 
-                    <div class="product__views--slide">
+                            <span class="product__box--stock">- 20%</span>
 
-                        <a href="../static/i/goods/product_1.png" data-fancybox="gallery">
-                            <img src="../static/i/goods/product_1.png" alt="">
-                        </a>
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_2.png" alt="">
+                            </a>
 
-                        <a class="favorite" href="#"></a>
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
 
-                        <a class="compare" href="#"></a>
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Asus Transformer 3 Pro Gold Black</a>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_3.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
+
+                            <span class="product__box--stock">- 20%</span>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_4.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_2.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
+
+                            <span class="product__box--stock">- 20%</span>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_3.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_4.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
 
                     </div>
 
                 </div>
 
-                <div class="product__views--carousel">
+                <div id="bestsellers" class="product__descr--box">
 
-                    <div class="product__views--carousel-item">
-                        <img src="../static/i/goods/product_1.png">
+                    <div class="product__box">
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_2.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Asus Transformer 3 Pro Gold Black</a>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_3.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_4.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_2.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_3.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_4.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
                     </div>
 
-                    <div class="product__views--carousel-item">
-                        <img src="../static/i/goods/product_1.png">
-                    </div>
+                </div>
 
-                    <div class="product__views--carousel-item">
-                        <img src="../static/i/goods/product_1.png">
-                    </div>
+                <div id="discounts" class="product__descr--box">
 
-                    <div class="product__views--carousel-item">
-                        <img src="../static/i/goods/product_1.png">
-                    </div>
+                    <div class="product__box">
 
-                    <div class="product__views--carousel-item">
-                        <img src="../static/i/goods/product_1.png">
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_2.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Asus Transformer 3 Pro Gold Black</a>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_3.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_4.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_2.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_3.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="product-slider__carousel--item">
+
+                            <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
+
+                            <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
+
+                            <a href="#" class="product-slider__carousel--foto">
+                                <img src="../static/i/goods/product_4.png" alt="">
+                            </a>
+
+                            <a href="#" class="rating">
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star rating__fil-star"></span>
+                                <span class="rating__star"></span>
+                            </a>
+
+                            <p class="product-slider__carousel--old-price">27 150 р.</p>
+
+                            <a href="#" class="product-slider__carousel--buy">
+                                <span></span>
+                                <span>заказать</span>
+                            </a>
+
+                            <p class="product-slider__carousel--new-price">23 490 руб.</p>
+
+                            <a href="#" class="product-slider__carousel--coins">
+                                <span class="counter">240</span> монеток
+                            </a>
+
+                            <div class="product-slider__carousel--tools">
+
+                                <a href="#">Сравнить</a>
+
+                                <a href="#">В избранное</a>
+
+                            </div>
+
+
+                        </div>
+
                     </div>
 
                 </div>
 
             </div>
 
-            <div class="product__views--tools">
-
-                <h3 class="product__views--name">Название товара</h3>
-
-                <p class="product__views--articul">Артикул: <span>23755</span></p>
-
-                <a href="#" class="product__views--alter">Альтернативые названия товаров, теги</a>
-
-                <div class="product__views--rating">
-                    <a href="#" class="rating">
-                        <span class="rating__star rating__fil-star"></span>
-                        <span class="rating__star rating__fil-star"></span>
-                        <span class="rating__star rating__fil-star"></span>
-                        <span class="rating__star rating__fil-star"></span>
-                        <span class="rating__star"></span>
-                    </a>
-                    <a href="#" class="more-rew">(<span>5</span>) отзывов о товаре</a>
-                </div>
-
-                <div class="product__views--element">
-                    <span class="product__views--property">Страна производитель:</span>
-                    <span class="product__views--value">Китай</span>
-                </div>
-
-                <div class="product__views--element">
-                    <span class="product__views--property">Материал:</span>
-                    <span class="product__views--value">Полипропилен</span>
-                </div>
-
-                <div class="product__views--element">
-                    <span class="product__views--property">Цвет:</span>
-                    <span class="product__views--value">
-                        <select class="product__views--select" name="">
-                            <option value="1">Серый</option>
-                            <option value="2">Серый</option>
-                            <option value="3">Серый</option>
-                            <option value="4">Серый</option>
-                            <option value="5">Серый</option>
-                        </select>
-                    </span>
-                </div>
-
-                <div class="product__views--element">
-                    <span class="product__views--property">Размер:</span>
-                    <span class="product__views--value">
-                        <select class="product__views--select" name="">
-                            <option value="1">М 44-46</option>
-                            <option value="2">М 47-49</option>
-                            <option value="3">М 50-52</option>
-                            <option value="4">М 53-55</option>
-                            <option value="5">М 56-58</option>
-                        </select>
-                    </span>
-                </div>
-
-                <div class="product__views--element">
-                    <span class="product__views--property">Примерный срок доставки:</span>
-                    <span class="product__views--value">3 дня</span>
-                </div>
-
-                <div class="product__views--element">
-                    <span class="product__views--property">Всего на складе:</span>
-                    <span class="product__views--value">56 штук</span>
-                </div>
-            </div>
-
-            <a href="#" class="product__views--banner">
-                <img src="../static/i/goods/single-banner.png" alt="">
-            </a>
-
-            <div class="product__views--prices">
-
-                <h3>Цена <span>(без учета доставки)</span></h3>
-
-                <form class="product__views--to-basket">
-                    <p class="old-price">3500 <i class="fa fa-rub" aria-hidden="true"></i></p>
-                    <p class="new-price" data-initial="3000">3000 <i class="fa fa-rub" aria-hidden="true"></i></p>
-
-                    <div class="product__views--counter">
-                        <span class="plus"></span>
-                        <input class="number" type="text" value="1" min="1" max="999" size="5"/>
-                        <span class="minus"></span>
-                    </div>
-
-                    <button class="product__views--submit" type="submit">Заказать</button>
-
-                    <p class="product__views--coins">3 монетки</p>
-
-                </form>
-
-                <div class="product__views--social">
-
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-
-                </div>
-
-
-            </div>
-
-            <div class="product__descr">
-
-                <ul class="product__descr--tabs">
-                    <li><a href="#about" class="active">Описание товара</a></li>
-                    <li><a href="#reviews">Отзывы о товаре</a></li>
-                    <li><a href="#information">Информация о продавце</a></li>
-                    <li><a href="#garanty">Гарантии</a></li>
-                    <li><a href="#send">Написать продавцу</a></li>
-                </ul>
-
-                <div class="product__descr--wrapper">
-
-                    <div id="about" class="product__descr--box">
-
-                        <p>2016 Новые Мужские Бегунов Фитнес TrainingRunningJogging Брюки Мужчины Бренд Gymshark Топы
-                        Бодибилдинг Тренировочные Брюки</p>
-                        <p>1. Дорогой друг, спасибо за покупку подарков в нашем магазине. пожалуйста, не забудьте
-                        предложить свое полное имя, подробный адрес, почтовый индекс, номер телефона. так что вы можете
-                        получить посылку успешно. <br>
-                         2.мы используем Азии szie, Пожалуйста, измерить размер в соответствии с брюками вы обычно носите
-                        (не ваше тело), проверьте ваш размер с ниже диаграмму размера перед покупкой, Если ваши
-                        измерения плавает между двумя размерами, советую выбрать больший размер. если вы не уверены в
-                        размере, пожалуйста, оставьте мне сообщение о вашем весе и росте, Я Могу дать вам предложение.
-                        примечание: Пожалуйста, позвольте 0.5-1 дюймов отличается из-за ручного измерения. (1 дюймов =
-                        2.54 см) <br>
-                        цвет фактические детали могут незначительно отличаться от указанных изображений в связи с другой
-                        экране компьютера, спасибо за ваше понимание.</p>
-
-                        <p>100% Brand New с тегом <br>
-                        мужская футболка для мужчин/женщин топы <br>
-                        рукав: О-образным вырезом <br>
-                        стиль: повседневный/мода <br>
-                        доступные размеры: M/L/XL/XXL <br>
-                        1 дюймов = 2.54 см 1 см = 0.394 дюймов <br>
-                        размер <br>
-                        плечо (см) <br>
-                        грудь (см) <br>
-                        длина (см) <br>
-                        объем груди (см) <br>
-                        м <br>
-                        40.5 <br>
-                        100 <br>
-                        75 <br>
-                        94-102 <br>
-                        L <br>
-                        42 <p>
-
-                    </div>
-
-                    <div id="reviews" class="product__descr--box">
-
-                        <p>2016 Новые Мужские Бегунов Фитнес TrainingRunningJogging Брюки Мужчины Бренд Gymshark Топы
-                            Бодибилдинг Тренировочные Брюки</p>
-                        <p>1. Дорогой друг, спасибо за покупку подарков в нашем магазине. пожалуйста, не забудьте
-                            предложить свое полное имя, подробный адрес, почтовый индекс, номер телефона. так что вы можете
-                            получить посылку успешно. <br>
-                            2.мы используем Азии szie, Пожалуйста, измерить размер в соответствии с брюками вы обычно носите
-                            (не ваше тело), проверьте ваш размер с ниже диаграмму размера перед покупкой, Если ваши
-                            измерения плавает между двумя размерами, советую выбрать больший размер. если вы не уверены в
-                            размере, пожалуйста, оставьте мне сообщение о вашем весе и росте, Я Могу дать вам предложение.
-                            примечание: Пожалуйста, позвольте 0.5-1 дюймов отличается из-за ручного измерения. (1 дюймов =
-                            2.54 см) <br>
-                            цвет фактические детали могут незначительно отличаться от указанных изображений в связи с другой
-                            экране компьютера, спасибо за ваше понимание.</p>
-
-                        <p>100% Brand New с тегом <br>
-                            мужская футболка для мужчин/женщин топы <br>
-                            рукав: О-образным вырезом <br>
-                            стиль: повседневный/мода <br>
-                            доступные размеры: M/L/XL/XXL <br>
-                            1 дюймов = 2.54 см 1 см = 0.394 дюймов <br>
-                            размер <br>
-                            плечо (см) <br>
-                            грудь (см) <br>
-                            длина (см) <br>
-                            объем груди (см) <br>
-                            м <br>
-                            40.5 <br>
-                            100 <br>
-                            75 <br>
-                            94-102 <br>
-                            L <br>
-                            42 <p>
-
-                    </div>
-
-                    <div id="information" class="product__descr--box">
-
-                        <p>2016 Новые Мужские Бегунов Фитнес TrainingRunningJogging Брюки Мужчины Бренд Gymshark Топы
-                            Бодибилдинг Тренировочные Брюки</p>
-                        <p>1. Дорогой друг, спасибо за покупку подарков в нашем магазине. пожалуйста, не забудьте
-                            предложить свое полное имя, подробный адрес, почтовый индекс, номер телефона. так что вы можете
-                            получить посылку успешно. <br>
-                            2.мы используем Азии szie, Пожалуйста, измерить размер в соответствии с брюками вы обычно носите
-                            (не ваше тело), проверьте ваш размер с ниже диаграмму размера перед покупкой, Если ваши
-                            измерения плавает между двумя размерами, советую выбрать больший размер. если вы не уверены в
-                            размере, пожалуйста, оставьте мне сообщение о вашем весе и росте, Я Могу дать вам предложение.
-                            примечание: Пожалуйста, позвольте 0.5-1 дюймов отличается из-за ручного измерения. (1 дюймов =
-                            2.54 см) <br>
-                            цвет фактические детали могут незначительно отличаться от указанных изображений в связи с другой
-                            экране компьютера, спасибо за ваше понимание.</p>
-
-                        <p>100% Brand New с тегом <br>
-                            мужская футболка для мужчин/женщин топы <br>
-                            рукав: О-образным вырезом <br>
-                            стиль: повседневный/мода <br>
-                            доступные размеры: M/L/XL/XXL <br>
-                            1 дюймов = 2.54 см 1 см = 0.394 дюймов <br>
-                            размер <br>
-                            плечо (см) <br>
-                            грудь (см) <br>
-                            длина (см) <br>
-                            объем груди (см) <br>
-                            м <br>
-                            40.5 <br>
-                            100 <br>
-                            75 <br>
-                            94-102 <br>
-                            L <br>
-                            42 <p>
-
-                    </div>
-
-                    <div id="garanty" class="product__descr--box">
-
-                        <p>2016 Новые Мужские Бегунов Фитнес TrainingRunningJogging Брюки Мужчины Бренд Gymshark Топы
-                            Бодибилдинг Тренировочные Брюки</p>
-                        <p>1. Дорогой друг, спасибо за покупку подарков в нашем магазине. пожалуйста, не забудьте
-                            предложить свое полное имя, подробный адрес, почтовый индекс, номер телефона. так что вы можете
-                            получить посылку успешно. <br>
-                            2.мы используем Азии szie, Пожалуйста, измерить размер в соответствии с брюками вы обычно носите
-                            (не ваше тело), проверьте ваш размер с ниже диаграмму размера перед покупкой, Если ваши
-                            измерения плавает между двумя размерами, советую выбрать больший размер. если вы не уверены в
-                            размере, пожалуйста, оставьте мне сообщение о вашем весе и росте, Я Могу дать вам предложение.
-                            примечание: Пожалуйста, позвольте 0.5-1 дюймов отличается из-за ручного измерения. (1 дюймов =
-                            2.54 см) <br>
-                            цвет фактические детали могут незначительно отличаться от указанных изображений в связи с другой
-                            экране компьютера, спасибо за ваше понимание.</p>
-
-                        <p>100% Brand New с тегом <br>
-                            мужская футболка для мужчин/женщин топы <br>
-                            рукав: О-образным вырезом <br>
-                            стиль: повседневный/мода <br>
-                            доступные размеры: M/L/XL/XXL <br>
-                            1 дюймов = 2.54 см 1 см = 0.394 дюймов <br>
-                            размер <br>
-                            плечо (см) <br>
-                            грудь (см) <br>
-                            длина (см) <br>
-                            объем груди (см) <br>
-                            м <br>
-                            40.5 <br>
-                            100 <br>
-                            75 <br>
-                            94-102 <br>
-                            L <br>
-                            42 <p>
-
-                    </div>
-
-                    <div id="send" class="product__descr--box">
-
-                        <p>2016 Новые Мужские Бегунов Фитнес TrainingRunningJogging Брюки Мужчины Бренд Gymshark Топы
-                            Бодибилдинг Тренировочные Брюки</p>
-                        <p>1. Дорогой друг, спасибо за покупку подарков в нашем магазине. пожалуйста, не забудьте
-                            предложить свое полное имя, подробный адрес, почтовый индекс, номер телефона. так что вы можете
-                            получить посылку успешно. <br>
-                            2.мы используем Азии szie, Пожалуйста, измерить размер в соответствии с брюками вы обычно носите
-                            (не ваше тело), проверьте ваш размер с ниже диаграмму размера перед покупкой, Если ваши
-                            измерения плавает между двумя размерами, советую выбрать больший размер. если вы не уверены в
-                            размере, пожалуйста, оставьте мне сообщение о вашем весе и росте, Я Могу дать вам предложение.
-                            примечание: Пожалуйста, позвольте 0.5-1 дюймов отличается из-за ручного измерения. (1 дюймов =
-                            2.54 см) <br>
-                            цвет фактические детали могут незначительно отличаться от указанных изображений в связи с другой
-                            экране компьютера, спасибо за ваше понимание.</p>
-
-                        <p>100% Brand New с тегом <br>
-                            мужская футболка для мужчин/женщин топы <br>
-                            рукав: О-образным вырезом <br>
-                            стиль: повседневный/мода <br>
-                            доступные размеры: M/L/XL/XXL <br>
-                            1 дюймов = 2.54 см 1 см = 0.394 дюймов <br>
-                            размер <br>
-                            плечо (см) <br>
-                            грудь (см) <br>
-                            длина (см) <br>
-                            объем груди (см) <br>
-                            м <br>
-                            40.5 <br>
-                            100 <br>
-                            75 <br>
-                            94-102 <br>
-                            L <br>
-                            42 <p>
-
-                    </div>
-
-                </div>
-
-            </div>
+            <a href="#" class="product__more">Показать все</a>
 
         </div>
 
     </div>
 
 </section>
-<!-- end product.html-->
 
-<!-- start product-slider.html-->
-<section class="product-slider">
+<!-- start main-banner.html-->
+<section class="main-banner">
 
     <div class="container">
 
-        <h3 class="product-slider__title">Товары этого продавца</h3>
-
-        <div class="product-slider__wrapper">
-
-            <div class="product-slider__carousel">
-
-                <div class="product-slider__carousel--box">
-                    <div class="product-slider__carousel--item">
-
-                        <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
-
-                        <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
-
-                        <a href="#" class="product-slider__carousel--foto">
-                            <img src="../static/i/goods/product_2.png" alt="">
-                        </a>
-
-                        <a href="#" class="rating">
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star"></span>
-                        </a>
-
-                        <p class="product-slider__carousel--old-price">27 150 р.</p>
-
-                        <a href="#" class="product-slider__carousel--buy">
-                            <span></span>
-                            <span>заказать</span>
-                        </a>
-
-                        <p class="product-slider__carousel--new-price">23 490 руб.</p>
-
-                        <a href="#" class="product-slider__carousel--coins">
-                            <span class="counter">240</span> монеток
-                        </a>
-
-                        <div class="product-slider__carousel--tools">
-
-                            <a href="#">Сравнить</a>
-
-                            <a href="#">В избранное</a>
-
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <div class="product-slider__carousel--box">
-                    <div class="product-slider__carousel--item">
-
-                        <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
-
-                        <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
-
-                        <a href="#" class="product-slider__carousel--foto">
-                            <img src="../static/i/goods/product_3.png" alt="">
-                        </a>
-
-                        <a href="#" class="rating">
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star"></span>
-                        </a>
-
-                        <p class="product-slider__carousel--old-price">27 150 р.</p>
-
-                        <a href="#" class="product-slider__carousel--buy">
-                            <span></span>
-                            <span>заказать</span>
-                        </a>
-
-                        <p class="product-slider__carousel--new-price">23 490 руб.</p>
-
-                        <a href="#" class="product-slider__carousel--coins">
-                            <span class="counter">240</span> монеток
-                        </a>
-
-                        <div class="product-slider__carousel--tools">
-
-                            <a href="#">Сравнить</a>
-
-                            <a href="#">В избранное</a>
-
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <div class="product-slider__carousel--box">
-                    <div class="product-slider__carousel--item">
-
-                        <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
-
-                        <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
-
-                        <a href="#" class="product-slider__carousel--foto">
-                            <img src="../static/i/goods/product_4.png" alt="">
-                        </a>
-
-                        <a href="#" class="rating">
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star"></span>
-                        </a>
-
-                        <p class="product-slider__carousel--old-price">27 150 р.</p>
-
-                        <a href="#" class="product-slider__carousel--buy">
-                            <span></span>
-                            <span>заказать</span>
-                        </a>
-
-                        <p class="product-slider__carousel--new-price">23 490 руб.</p>
-
-                        <a href="#" class="product-slider__carousel--coins">
-                            <span class="counter">240</span> монеток
-                        </a>
-
-                        <div class="product-slider__carousel--tools">
-
-                            <a href="#">Сравнить</a>
-
-                            <a href="#">В избранное</a>
-
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <div class="product-slider__carousel--box">
-                    <div class="product-slider__carousel--item">
-
-                        <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
-
-                        <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
-
-                        <a href="#" class="product-slider__carousel--foto">
-                            <img src="../static/i/goods/product_2.png" alt="">
-                        </a>
-
-                        <a href="#" class="rating">
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star"></span>
-                        </a>
-
-                        <p class="product-slider__carousel--old-price">27 150 р.</p>
-
-                        <a href="#" class="product-slider__carousel--buy">
-                            <span></span>
-                            <span>заказать</span>
-                        </a>
-
-                        <p class="product-slider__carousel--new-price">23 490 руб.</p>
-
-                        <a href="#" class="product-slider__carousel--coins">
-                            <span class="counter">240</span> монеток
-                        </a>
-
-                        <div class="product-slider__carousel--tools">
-
-                            <a href="#">Сравнить</a>
-
-                            <a href="#">В избранное</a>
-
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <div class="product-slider__carousel--box">
-                    <div class="product-slider__carousel--item">
-
-                        <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
-
-                        <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
-
-                        <a href="#" class="product-slider__carousel--foto">
-                            <img src="../static/i/goods/product_3.png" alt="">
-                        </a>
-
-                        <a href="#" class="rating">
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star"></span>
-                        </a>
-
-                        <p class="product-slider__carousel--old-price">27 150 р.</p>
-
-                        <a href="#" class="product-slider__carousel--buy">
-                            <span></span>
-                            <span>заказать</span>
-                        </a>
-
-                        <p class="product-slider__carousel--new-price">23 490 руб.</p>
-
-                        <a href="#" class="product-slider__carousel--coins">
-                            <span class="counter">240</span> монеток
-                        </a>
-
-                        <div class="product-slider__carousel--tools">
-
-                            <a href="#">Сравнить</a>
-
-                            <a href="#">В избранное</a>
-
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <div class="product-slider__carousel--box">
-                    <div class="product-slider__carousel--item">
-
-                        <a href="#" class="product-slider__carousel--cat">Аудио техника</a>
-
-                        <a href="#" class="product-slider__carousel--name">Samsung WAM7500 Аакустическая система</a>
-
-                        <a href="#" class="product-slider__carousel--foto">
-                            <img src="../static/i/goods/product_4.png" alt="">
-                        </a>
-
-                        <a href="#" class="rating">
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star rating__fil-star"></span>
-                            <span class="rating__star"></span>
-                        </a>
-
-                        <p class="product-slider__carousel--old-price">27 150 р.</p>
-
-                        <a href="#" class="product-slider__carousel--buy">
-                            <span></span>
-                            <span>заказать</span>
-                        </a>
-
-                        <p class="product-slider__carousel--new-price">23 490 руб.</p>
-
-                        <a href="#" class="product-slider__carousel--coins">
-                            <span class="counter">240</span> монеток
-                        </a>
-
-                        <div class="product-slider__carousel--tools">
-
-                            <a href="#">Сравнить</a>
-
-                            <a href="#">В избранное</a>
-
-                        </div>
-
-
-                    </div>
-                </div>
+        <div class="main-banner__box">
+
+            <img src="../static/i/banners/main-banner.png" alt="">
+
+            <div class="main-banner__about">
+
+                <h3>все по 900 <i class="fa fa-rub" aria-hidden="true"></i></h3>
+
+                <ul>
+                    <li>Комбинезоны</li>
+                    <li>Мобильные телефоны</li>
+                    <li>Резиновые сапоги</li>
+                    <li>Бейсбольные биты</li>
+                    <li>Кухонные мойки</li>
+                </ul>
+                <ul>
+                    <li>Телевизоры</li>
+                    <li>Электронные книги</li>
+                    <li>Штанги, грифы</li>
+                    <li>Детские кроватки</li>
+                    <li>Дешевые пылесосы</li>
+                </ul>
+
+                <a href="#" class="main-banner__about--more">Посмотреть все</a>
 
             </div>
 
+
         </div>
+
+        <h3 class="main-banner__title">Интернет-магазин Safe Shopping: все самое выгодное</h3>
+
+        <p class="main-banner__descr">Safe Shopping.ru- Федеральная торгово-информационная платформа предлагающая
+        сервис "безопасный он-лайн шоппинг". <br>
+        Покупатель резервирует стоимость товра на Safe Shopping.ru, Продавец получает зарезервированную сумму только после
+        выполнения им условий сделки.
+        </p>
+
+        <a href="#" class="main-banner__read-more">Читать далее</a>
 
     </div>
 
 </section>
-<!-- end product-slider.html-->
+<!-- end main-banner.html-->
 
 <!-- start footer.html-->
 <footer class="footer">
@@ -1042,10 +1228,33 @@
     </div>
 
 </footer>
+
+<div id="city-selection" class="modal-city">
+
+    <h3 class="title">Ваш город</h3>
+
+    <span class="modal-city__close"></span>
+
+    <p class="subtitle">Выберете город, в котором собираетесь получать товар. <br>
+        От выбора зависит стоимость товара и доставки.
+    </p>
+
+    <form action="" class="modal-city__form">
+
+        <input class="modal-city__form--field" type="text" placeholder="Ввведите название города">
+
+        <p class="subtitle">Например: Москва, Санкт-Петербургб еще </p>
+
+        <button class="modal-city__form--submit" type="submit">Сохранить</button>
+
+    </form>
+
+</div>
+
+<div id="black-overlay"></div>
 <!-- end footer.html-->
 
 <!-- start html_close.html-->
-<!--<script src='../static/js/jquery-2.1.3.min.js' type="text/javascript"></script>-->
 <script src='../static/js/vendors.js' type="text/javascript"></script>
 <script src="../static/js/common.js" type="text/javascript"></script>
 </body>

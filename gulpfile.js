@@ -103,6 +103,19 @@ gulp.task('browser-sync', function () { // Создаем таск browser-sync
     });
 });
 
+gulp.task('vendors', ['clean'], function () {
+    return gulp.src(['app/js-libs/jquery-2.1.3.min.js',
+            'app/js-libs/owl.carousel.min.js',
+            'app/js-libs/slick.js',
+            'app/js-libs/countdown.js'])// Берем все необходимые библиотеки
+        .pipe(plumber())
+        .pipe(concat('vendors.js'))// Собираем их в кучу в новом файле vendor.js
+        .pipe(rename({}))
+        /*.pipe(uglify()) // Сжимаем JS файл*/
+        .pipe(plumber.stop())
+        .pipe(gulp.dest('./static/js'));// Выгружаем в папку js
+});
+
 gulp.task('compress', ['clean'], function () {// Создаем таск compress
     return gulp.src('app/js/*.js')// Берем все необходимые библиотеки
         .pipe(plumber())

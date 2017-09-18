@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-   /*show search form categories list*/    
+    /*show search form categories list*/
     $(document).on('click', '.search__form--trigger', function () {
         var list = $(this).next('.search__form--list');
         list.slideToggle('fast');
@@ -12,19 +12,19 @@ $(document).ready(function () {
 
         list.slideUp('fast');
         $('.search__form--trigger .search__form--title').html(listText).attr('data-id', listAttr);
-    });   
+    });
     /*close*/
-    
+
     /*mobile menu*/
     $(document).on('click', '#mobile-menu', function () {
-       event.preventDefault();       
-       var menu = $(this).next('.header__nav');
-       $(this).toggleClass('header__trigger--active'); 
-       menu.slideToggle('slow');
+        event.preventDefault();
+        var menu = $(this).next('.header__nav');
+        $(this).toggleClass('header__trigger--active');
+        menu.slideToggle('slow');
         return false;
     });
     /*close*/
-    
+
     /*product slider*/
     $('.product-slider__carousel').slick({
         dots: false,
@@ -54,13 +54,13 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    arrows: false  
+                    arrows: false
                 }
-            }            
+            }
         ]
     });
     /*close*/
-    
+
     /*single product slider*/
     $('.product__views--slider').slick({
         slidesToShow: 1,
@@ -91,20 +91,20 @@ $(document).ready(function () {
                 breakpoint: 770,
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 1,                   
+                    slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 660,
                 settings: {
-                    slidesToShow: 3,                   
+                    slidesToShow: 3,
                     slidesToScroll: 1
                 }
             }
         ]
     });
     /*close*/
-    
+
     /*product counter*/
     $(document).on('click', '.plus', function () {
         event.preventDefault();
@@ -147,6 +147,46 @@ $(document).ready(function () {
         $('.product__descr--box').hide(0);
         $(tabId).fadeIn();
     });
-    /*close*/    
+    /*close*/
+    
+    /*main page stock line*/
+    if($('.product__stock--quantity').length > 0){
+        var number = parseInt($('.product__stock--quantity-number').find('.val').html()),//находим цифру остатка товаров
+            total = parseInt($('.product__stock--quantity-number:nth-last-of-type(2)').find('.val').html()),//находим сколько всего продано
+            width = ((number/total)*100);//вычисляем процент
+        $('.product__stock--quantity').find('.product__stock--quantity-fillline').css({width: width + '%'});//задаем линии длину, раную количеству процентов
+    }
+    /*close*/
+
+    /*main page countdown*/
+    if (('#countdown').length > 0) {
+        /*var date = $('#countdown').attr('data-date');*/
+        $('#countdown').countdown({
+            date: '16 november 2017 12:00:00',
+            format: "on",
+            languge: 'ru'
+        });
+    }
+    /*close single afisha countdown*/
+
+    /*----------modals----------*/
+    /*city modal*/
+    $(document).on('click', '.city-select', function () {
+        event.preventDefault();
+        $('#black-overlay').fadeIn(400,
+            function () {
+                $('#city-selection').css('display', 'block').animate({opacity: 1}, 200);
+            });
+    });
+    $(document).on('click', '.modal-city__close, #black-overlay', function () {
+        $('#city-selection').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#black-overlay').fadeOut(400);
+            }
+        );
+    });
+    /*close*/
+    /*----------close-----------*/
 
 });

@@ -1,16 +1,16 @@
-.header{
+.header {
   display: block;
   position: relative;
   float: left;
   width: 100%;
-  &__top{
+  &__top {
     display: block;
     position: relative;
     float: left;
     width: 100%;
     border-bottom: 1px solid #e3e3e3;
   }
-  &__top-links{
+  &__top-links {
     display: block;
     position: relative;
     float: left;
@@ -18,11 +18,11 @@
     padding-top: 15px;
     padding-bottom: 13px;
     @include box-sizing(border-box);
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 992px) {
       padding: 15px 15px;
       @include box-sizing(border-box);
     }
-    &--region{
+    &--region {
       display: block;
       position: relative;
       float: left;
@@ -30,16 +30,16 @@
       color: #0e0e0e;
       font-size: 13px;
       font-weight: 300;
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         margin-left: 15px;
         @include box-sizing(border-box);
       }
-      > span{
+      > span {
         display: block;
         position: relative;
         float: left;
       }
-      > span:before{
+      > span:before {
         display: block;
         position: absolute;
         content: '';
@@ -53,7 +53,7 @@
         -webkit-background-size: contain;
         background-size: contain;
       }
-      > a{
+      > a {
         display: block;
         position: relative;
         float: left;
@@ -66,24 +66,24 @@
         font-size: 13px;
         font-weight: 300;
       }
-      > a:hover{
+      > a:hover {
         color: #0e0e0e;
         text-decoration: underline;
         text-decoration-style: dotted;
       }
     }
-    &--cabinet{
+    &--cabinet {
       display: block;
       position: relative;
       float: right;
       max-width: 144px;
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         position: absolute;
         top: 15px;
         right: 0;
       }
     }
-    &--enter{
+    &--enter {
       display: block;
       position: relative;
       float: left;
@@ -92,11 +92,11 @@
       font-weight: 300;
       text-decoration: underline;
       text-decoration-style: dotted;
-      &:hover{
+      &:hover {
         color: #0e0e0e;
         text-decoration: none;
       }
-      &:first-of-type:before{
+      &:first-of-type:before {
         display: block;
         position: absolute;
         content: '';
@@ -110,9 +110,9 @@
         -webkit-background-size: contain;
         background-size: contain;
       }
-      &:nth-of-type(2){
+      &:nth-of-type(2) {
         margin-left: 15px;
-        &:before{
+        &:before {
           display: block;
           position: absolute;
           content: '/';
@@ -124,7 +124,7 @@
         }
       }
     }
-    &--tools{
+    &--tools {
       @include display-flex(flex);
       @include flex-wrap(wrap);
       @include flex-direction(row);
@@ -134,15 +134,15 @@
       width: calc(100% - 270px);
       padding-right: 109px;
       @include box-sizing(border-box);
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 992px) {
         width: 100%;
         @include justify-content(center);
         padding: 15px 15px;
       }
-      @include breakpoint(max-width 660px){
+      @include breakpoint(max-width 660px) {
         @include flex-direction(column);
       }
-      > .element{
+      > .element {
         display: block;
         position: relative;
         float: left;
@@ -153,10 +153,10 @@
         padding-left: 18px;
         padding-right: 18px;
         @include box-sizing(border-box);
-        @include breakpoint(max-width 660px){
+        @include breakpoint(max-width 660px) {
           margin: 5px 0;
         }
-        &:after{
+        &:after {
           display: block;
           position: absolute;
           content: '';
@@ -166,10 +166,10 @@
           top: 4px;
           right: 0;
         }
-        &:last-of-type:after{
+        &:last-of-type:after {
           display: none;
         }
-        .icon{
+        .icon {
           display: block;
           position: relative;
           float: left;
@@ -178,9 +178,24 @@
           margin-right: 9px;
           margin-top: -2px;
           overflow: hidden;
-          img{
+          img {
             object-fit: contain;
           }
+        }
+        .counter {
+          display: block;
+          position: absolute;
+          color: #0e0e0e;
+          background-color: #d6d5d5;
+          padding: 4px;
+          @include box-sizing(border-box);
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 8px;
+          top: -7px;
+          /* right: 0; */
+          margin-left: 10px;
+          border-radius: 15px;
         }
       }
     }
