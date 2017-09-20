@@ -14,6 +14,34 @@ $(document).ready(function () {
         $('.search__form--trigger .search__form--title').html(listText).attr('data-id', listAttr);
     });
     /*close*/
+    
+    /*header submenu*/
+    $(document).on('click', '.header__nav li a', function (event) {
+        event.preventDefault();
+        var HeadSubmenu = $(this).next('.header__catalog');
+        if($(this).hasClass('show-head-submenu') && HeadSubmenu.length > 0){
+            $(this).removeClass('show-head-submenu');
+            HeadSubmenu.slideUp(400);
+        } else {
+            $('.header__nav li a').removeClass('show-head-submenu');
+            $('.header__catalog').slideUp(400);
+            $(this).addClass('show-head-submenu');
+            HeadSubmenu.slideDown(400);
+        }
+    });
+    /*close*/
+    
+    /*cabinet submenu*/
+    $(document).on('click', '.header__top-links--enter', function () {
+       if($(this).next('.header__top-links--cabinet-submenu').length > 0){
+           event.preventDefault();
+           var submenu = $(this).next('.header__top-links--cabinet-submenu');
+           $(this).toggleClass('show-cabinet-menu');
+           submenu.slideToggle(400);
+           return false;
+       } 
+    });
+    /*close*/
 
     /*mobile menu*/
     $(document).on('click', '#mobile-menu', function () {
@@ -21,6 +49,13 @@ $(document).ready(function () {
         var menu = $(this).next('.header__nav');
         $(this).toggleClass('header__trigger--active');
         menu.slideToggle('slow');
+        return false;
+    });
+    $(document).on('click', '#mobile-menu', function () {
+        event.preventDefault();
+        var userMenu = $(this).next('.header__cabinet-nav');
+        $(this).toggleClass('header__trigger--active');
+        userMenu.slideToggle('slow');
         return false;
     });
     /*close*/
@@ -153,7 +188,7 @@ $(document).ready(function () {
     if($('.product__stock--quantity').length > 0){
         var number = parseInt($('.product__stock--quantity-number').find('.val').html()),//находим цифру остатка товаров
             total = parseInt($('.product__stock--quantity-number:nth-last-of-type(2)').find('.val').html()),//находим сколько всего продано
-            width = ((number/total)*100);//вычисляем процент
+            width = ((number/(number+total))*100);//вычисляем процент
         $('.product__stock--quantity').find('.product__stock--quantity-fillline').css({width: width + '%'});//задаем линии длину, раную количеству процентов
     }
     /*close*/
@@ -180,6 +215,23 @@ $(document).ready(function () {
     });
     $(document).on('click', '.modal-city__close, #black-overlay', function () {
         $('#city-selection').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#black-overlay').fadeOut(400);
+            }
+        );
+    });
+    /*close*/
+    /*1 click buy modal*/
+    $(document).on('click', '.product__views--click', function () {
+        event.preventDefault();
+        $('#black-overlay').fadeIn(400,
+            function () {
+                $('#one-click-buy').css('display', 'block').animate({opacity: 1}, 200);
+            });
+    });
+    $(document).on('click', '.modal-city__close, #black-overlay', function () {
+        $('#one-click-buy').animate({opacity: 0}, 200,
             function () {
                 $(this).css('display', 'none');
                 $('#black-overlay').fadeOut(400);

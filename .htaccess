@@ -1,0 +1,32 @@
+Options -Indexes
+ErrorDocument 403 /403
+ErrorDocument 404 /404
+
+AddDefaultCharset UTF-8
+php_value default_charset utf-8
+
+RewriteEngine on
+
+# Перенаправление site.ru/xyz -> www.site.ru/xyz
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]+$
+RewriteRule (.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Система управления
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(cms/.*) /cms/? [QSA,L]
+
+# редирект страниц без слеша
+RewriteCond %{REQUEST_URI} (.*/[^/.]+)($|\?)
+RewriteRule .* %1/ [R=301,L]
+
+# Отображение страниц сайта
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* ? [QSA,L]
+
+AuthType Basic
+AuthName "Site is updated. Please try again later."
+AuthUserFile /home/oami/new/.htpasswd
+require valid-user
