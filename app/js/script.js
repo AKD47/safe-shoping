@@ -14,12 +14,12 @@ $(document).ready(function () {
         $('.search__form--trigger .search__form--title').html(listText).attr('data-id', listAttr);
     });
     /*close*/
-    
+
     /*header submenu*/
     $(document).on('click', '.header__nav li a', function (event) {
         event.preventDefault();
         var HeadSubmenu = $(this).next('.header__catalog');
-        if($(this).hasClass('show-head-submenu') && HeadSubmenu.length > 0){
+        if ($(this).hasClass('show-head-submenu') && HeadSubmenu.length > 0) {
             $(this).removeClass('show-head-submenu');
             HeadSubmenu.slideUp(400);
         } else {
@@ -30,16 +30,16 @@ $(document).ready(function () {
         }
     });
     /*close*/
-    
+
     /*cabinet submenu*/
     $(document).on('click', '.header__top-links--enter', function () {
-       if($(this).next('.header__top-links--cabinet-submenu').length > 0){
-           event.preventDefault();
-           var submenu = $(this).next('.header__top-links--cabinet-submenu');
-           $(this).toggleClass('show-cabinet-menu');
-           submenu.slideToggle(400);
-           return false;
-       } 
+        if ($(this).next('.header__top-links--cabinet-submenu').length > 0) {
+            event.preventDefault();
+            var submenu = $(this).next('.header__top-links--cabinet-submenu');
+            $(this).toggleClass('show-cabinet-menu');
+            submenu.slideToggle(400);
+            return false;
+        }
     });
     /*close*/
 
@@ -183,12 +183,44 @@ $(document).ready(function () {
         $(tabId).fadeIn();
     });
     /*close*/
-    
+
+    /*coins tabs*/
+    $('.coins__tabs-container--box').each(function (i) {
+        if (i != 0) {
+            $(this).hide(0)
+        }
+    });
+    $(document).on('click', '.coins__tabs a', function (e) {
+        e.preventDefault();
+        var tabId = $(this).attr('href');
+        $('.coins__tabs a').removeClass('active');
+        $(this).addClass('active');
+        $('.coins__tabs-container--box').hide(0);
+        $(tabId).fadeIn();
+    });
+    /*close*/
+
+    /*registration tabs*/
+    /*$('.regist__tabs-contant--wrapper').each(function (i) {
+     if (i != 0) {
+     $(this).hide(0)
+     }
+     });
+     $(document).on('click', '.regist__tabs a', function (e) {
+     e.preventDefault();
+     var tabId = $(this).attr('href');
+     $('.regist__tabs a').removeClass('active');
+     $(this).addClass('active');
+     $('.regist__tabs-contant--wrapper').hide(0);
+     $(tabId).fadeIn();
+     });*/
+    /*close*/
+
     /*main page stock line*/
-    if($('.product__stock--quantity').length > 0){
+    if ($('.product__stock--quantity').length > 0) {
         var number = parseInt($('.product__stock--quantity-number').find('.val').html()),//находим цифру остатка товаров
             total = parseInt($('.product__stock--quantity-number:nth-last-of-type(2)').find('.val').html()),//находим сколько всего продано
-            width = ((number/(number+total))*100);//вычисляем процент
+            width = ((number / (number + total)) * 100);//вычисляем процент
         $('.product__stock--quantity').find('.product__stock--quantity-fillline').css({width: width + '%'});//задаем линии длину, раную количеству процентов
     }
     /*close*/
@@ -203,6 +235,15 @@ $(document).ready(function () {
         });
     }
     /*close single afisha countdown*/
+
+    /*reistration mobile forms*/
+    $(document).on('click', '.regist__column .title .mobile-trigger', function () {
+        var hoverbox = $(this).closest('.regist__column').find('.regist__column--wrapper');
+        $(this).toggleClass('show-form');
+        hoverbox.slideToggle(400);
+        return false;
+    });
+    /*close*/
 
     /*----------modals----------*/
     /*city modal*/
@@ -232,6 +273,23 @@ $(document).ready(function () {
     });
     $(document).on('click', '.modal-city__close, #black-overlay', function () {
         $('#one-click-buy').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#black-overlay').fadeOut(400);
+            }
+        );
+    });
+    /*close*/
+    /*offer modal*/
+    $(document).on('click', '.offer-doc', function () {
+        event.preventDefault();
+        $('#black-overlay').fadeIn(400,
+            function () {
+                $('#offer-modal').css('display', 'block').animate({opacity: 1}, 200);
+            });
+    });
+    $(document).on('click', '.offer-modal__close, #black-overlay', function () {
+        $('#offer-modal').animate({opacity: 0}, 200,
             function () {
                 $(this).css('display', 'none');
                 $('#black-overlay').fadeOut(400);
