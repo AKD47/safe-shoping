@@ -2,9 +2,11 @@
   display: block;
   position: relative;
   float: left;
-  width: 100%;
-  .logo{
-    margin-top: 7px;
+  width: calc(100% - (270px));
+  margin-top: 0;
+  @include breakpoint(max-width 660px){
+    width: 100%;
+    margin-top: 15px;
   }
   .partner{
     margin-top: 30px;
@@ -20,7 +22,7 @@
     display: block;
     position: relative;
     float: left;
-    width: calc(100% - (270px + 200px + 68px + 61px));
+    width: calc(100% - (200px + 68px + 61px));
     margin-top: 30px;
     margin-bottom: 24px;
     margin-left: 68px;
@@ -103,7 +105,7 @@
       display: none;
       position: absolute;
       width: 100%;
-      top: 47px;
+      top: 34px;
       left: 0;
       list-style: none;
       padding-left: 0;

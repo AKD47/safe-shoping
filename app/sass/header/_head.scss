@@ -5,10 +5,17 @@
   width: 100%;
   &__top {
     display: block;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
     float: left;
     width: 100%;
     border-bottom: 1px solid #e3e3e3;
+    z-index: 2;
+    @include breakpoint(max-width 660px){
+      position: relative;
+    }
   }
   &__top-links {
     display: block;
@@ -30,11 +37,6 @@
       color: #0e0e0e;
       font-size: 13px;
       font-weight: 300;
-      &:hover{
-        .header__top-links--hover-region{
-          display: block;
-        }
-      }
       @include breakpoint(max-width 992px) {
         margin-left: 15px;
         @include box-sizing(border-box);
@@ -109,6 +111,7 @@
         float: left;
         width: 100%;
         padding: 0 20px;
+        @include box-sizing(border-box);
         margin-bottom: 20px;
         .yes{
           display: block;
@@ -295,6 +298,9 @@
           background-color: #e3e3e3;
           top: 4px;
           right: 0;
+          @include breakpoint(max-width 660px){
+            display: none;
+          }
         }
         &:last-of-type:after {
           display: none;
@@ -327,6 +333,22 @@
           margin-left: 10px;
           border-radius: 15px;
         }
+      }
+    }
+  }
+  &__logo{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 48px;
+    @include breakpoint(max-width 660px){
+      margin-top: 0;
+    }
+    .logo{
+      margin-top: 7px;
+      @include breakpoint(max-width 660px){
+        margin-left: calc(50% - (270px/2));
       }
     }
   }

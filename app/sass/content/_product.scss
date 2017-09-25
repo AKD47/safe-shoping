@@ -1094,7 +1094,7 @@
     display: block;
     position: relative;
     float: left;
-    width: calc(100% - (370px + 2px));
+    width: calc(100% - (370px + 4px));
     padding-left: 22px;
     @include box-sizing(border-box);
     @include breakpoint(max-width 660px) {
@@ -1156,15 +1156,20 @@
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include flex-direction(row);
-    @include justify-content(space-between);
+    @include justify-content(flex-start);
     position: relative;
     float: left;
     width: 100%;
     padding-top: 8px;
     @include box-sizing(border-box);
     > .product-slider__carousel--item {
-      width: 33%;
+      width: 248px;
       height: 386px;
+      @include breakpoint(max-width 1200px) {
+        width: 30%;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
       @include breakpoint(max-width 992px) {
         width: 100%;
         padding-left: 15px;
@@ -1261,6 +1266,20 @@
       right: 20px;
       background-image: url('../i/icons/more-dob-arr-icon.png');
       background-repeat: no-repeat;
+    }
+  }
+  &__wrapper{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include breakpoint(max-width 660px){
+      @include flex-direction(column);
+    }
+    .product__stock{
+      flex: 1 0 0;
+    }
+    .product__items {
+      flex: 2 0 0;
     }
   }
 }

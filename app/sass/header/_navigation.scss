@@ -270,7 +270,6 @@
         color: #fff;
       }
     }
-
   }
   > li:first-of-type:after{
     display: none;
@@ -279,15 +278,15 @@
 
 .header__trigger {
   display: none;
+  position: fixed;
   width: 50px;
   height: 50px;
+  top: 232px;
+  right: 12px;
   background-color: #fff;
   border-radius: 50%;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
-  position: fixed;
-  right: 12px;
   z-index: 15;
-  top: 30px;
   @include breakpoint(max-width 736px) {
     display: block;
   }

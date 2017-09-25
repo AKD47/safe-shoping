@@ -245,9 +245,58 @@ $(document).ready(function () {
     });
     /*close*/
 
+    /*show region*/
+    $(document).on('click', '.city-select', function (event) {
+        event.preventDefault();
+        $(this).toggleClass('show-hover-region');
+        $(this).next('.header__top-links--hover-region').toggle();
+        return false;
+    });
+    $(document).on('click', '.header__top-links--hover-region .yes', function (event) {
+        event.preventDefault();
+        var SelectCityTrigger = $(this).closest('.header__top-links--region').find('.city-select'),
+            SelectCityBox = $(this).closest('.header__top-links--hover-region');
+        SelectCityTrigger.removeClass('show-hover-region');
+        SelectCityBox.toggle();
+
+    });
+    /*close*/
+
+    /*----------catalog scripts----------*/
+    /*catigories submenu*/
+    $(document).on('click', '.main-submenu__list a', function (e) {
+        e.preventDefault();
+        CatList = $(this).next('.main-submenu__list--catalog');
+        $(this).toggleClass('main-submenu-active');
+        CatList.slideToggle(400);
+        return false;
+    });
+    /*close*/
+    /*show more filter elements*/
+    $(document).on('click', '.catalog__sidebar--show-more', function (event) {
+        event.preventDefault();
+        var parent = $(this).parent('.catalog__sidebar--maker'),
+            titleHeight = parent.find('.subtitle').height(),
+            elHeight = parent.find('.catalog__sidebar--element').height(),
+            elLength = parent.find('.catalog__sidebar--element').length;
+        if ($(this).hasClass('show-all')) {
+            $(this).removeClass('show-all').text('+ Показать еще');
+            parent.css({
+                height: '270px'
+            });
+        } else {
+            $(this).addClass('show-all').text('+ Скрыть');
+            parent.css({
+                height: (elHeight + titleHeight) * elLength + 'px'
+            });
+        }
+    });
+    /*close*/
+    /*----------close-----------*/
+
     /*----------modals----------*/
     /*city modal*/
-    $(document).on('click', '.city-select', function () {
+    $(document).on('click', '.header__top-links--hover-region .chose', function () {
         event.preventDefault();
         $('#black-overlay').fadeIn(400,
             function () {
@@ -297,6 +346,63 @@ $(document).ready(function () {
         );
     });
     /*close*/
+    /*confirm modal*/
+    $(document).on('click', '.order__single--ok', function () {
+        event.preventDefault();
+        $('#modal-confirm').css('display', 'block').animate({opacity: 1}, 200);
+    });
+    $(document).on('click', '.modal-confirm__no, .modal-confirm__yes', function () {
+        event.preventDefault();
+        $('#modal-confirm').animate({opacity: 0}, 200).css('display', 'none');
+    });
+    /*close*/
+    /*start claim modal*/
+    $(document).on('click', '.order__single--return', function () {
+        event.preventDefault();
+        $('#black-overlay').fadeIn(400,
+            function () {
+                $('#modal-start-claim').css('display', 'block').animate({opacity: 1}, 200);
+            });
+    });
+    $(document).on('click', '.modal-confirm__close, .modal-confirm__no, #black-overlay', function () {
+        $('#modal-start-claim').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#black-overlay').fadeOut(400);
+            }
+        );
+    });
+    /*close*/
+    /*send ms to admin*/
+    $(document).on('click', '.about-error', function () {
+        event.preventDefault();
+        $('#black-overlay').fadeIn(400,
+            function () {
+                $('#modal-to-admin').css('display', 'block').animate({opacity: 1}, 200);
+            });
+    });
+    $(document).on('click', '.modal-confirm__close, #black-overlay', function () {
+        $('#modal-to-admin').animate({opacity: 0}, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('#black-overlay').fadeOut(400);
+            }
+        );
+    });
+    /*close*/
     /*----------close-----------*/
+
+    /*rating*/
+    $(document).on('click', '.js-review-rating', function () {
+        var selectedCssClass = 'rating__fil-star',
+            prevStars = $(this).prevAll('.js-review-rating'),
+            nextStars = $(this).nextAll('.js-review-rating');
+
+        prevStars.addClass(selectedCssClass);
+        nextStars.removeClass(selectedCssClass);
+        $(this).addClass(selectedCssClass).parent().addClass('vote-cast');
+
+    });
+    /*close*/
 
 });
