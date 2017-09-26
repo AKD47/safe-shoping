@@ -198,23 +198,7 @@ $(document).ready(function () {
         $('.coins__tabs-container--box').hide(0);
         $(tabId).fadeIn();
     });
-    /*close*/
-
-    /*registration tabs*/
-    /*$('.regist__tabs-contant--wrapper').each(function (i) {
-     if (i != 0) {
-     $(this).hide(0)
-     }
-     });
-     $(document).on('click', '.regist__tabs a', function (e) {
-     e.preventDefault();
-     var tabId = $(this).attr('href');
-     $('.regist__tabs a').removeClass('active');
-     $(this).addClass('active');
-     $('.regist__tabs-contant--wrapper').hide(0);
-     $(tabId).fadeIn();
-     });*/
-    /*close*/
+    /*close*/  
 
     /*main page stock line*/
     if ($('.product__stock--quantity').length > 0) {
@@ -264,14 +248,67 @@ $(document).ready(function () {
 
     /*----------catalog scripts----------*/
     /*catigories submenu*/
-    $(document).on('click', '.main-submenu__list a', function (e) {
+    $(document).on('click', '.first-submenu', function (e) {//клик по меню первого уровная
         e.preventDefault();
-        CatList = $(this).next('.main-submenu__list--catalog');
-        $(this).toggleClass('main-submenu-active');
-        CatList.slideToggle(400);
-        return false;
+        var selector = $(this),//элемент, по которуму кликаем
+        selectorClass = $('.main-submenu');// елемент, который нужно показать       
+        showSubmenu(selector, selectorClass);//вызываем функцию выпадающего меню
+    });
+    $(document).on('click', '.second-submenu', function (e) {//клик по меню вторго уровная
+        e.preventDefault();       
+        var selector = $(this),//элемент, по которуму кликаем
+            selectorClass = $('.main-submenu__list');// елемент, который нужно показать    
+        showSubmenu(selector, selectorClass);//вызываем функцию выпадающего меню
+    });
+    $(document).on('click', '.third-submenu', function (e) {//клик по меню третьего уровная
+        e.preventDefault();       
+        var selector = $(this),//элемент, по которуму кликаем
+            selectorClass = $('.main-submenu__list--catalog');// елемент, который нужно показать  
+        showSubmenu(selector, selectorClass);//вызываем функцию выпадающего меню
     });
     /*close*/
+    
+    /*sidebar line filter*/
+    $(function () {
+
+        var min = parseInt($("input[name='minPrice']").val(), 10);
+        var max = parseInt($("input[name='maxPrice']").val(), 10);
+        var selMin = $("input[name='minPrice']").attr('selprice');
+        var selMax = parseInt($("input[name='maxPrice']").attr('selprice'), 10);        
+        var number = 3500;        
+
+        $("#slider_price").slider({
+            range: true,
+            min: min,
+            max: max,
+            values: [selMin, selMax],           
+            slide: function (event, ui) {
+                $("#price").val(ui.values[0]);//Поле минимального значения               
+                $("#price2").val(ui.values[1]); //Поле максимального значения
+            },
+            stop: function (event, ui) {
+                $("input[name='minPrice']").val(ui.values[0]).change();
+                $("input[name='maxPrice']").val(ui.values[1]).change();
+            }
+        });
+        //Записываем значения ползунков в момент загрузки страницы
+        //То есть значения по умолчанию
+        $("#price").val($("#slider_price").slider("values", 0));
+        $("#price2").val($("#slider_price").slider("values", 1));
+    });
+
+    $('#price').change(function () {
+        var val = $(this).val();
+        var obj = $(this).closest('div');
+        $('#slider_price').slider("values", 0, val);
+    });
+    $('#price2').change(function () {
+        var val1 = $(this).val();
+        var obj = $(this).closest('div');
+        $('#slider_price').slider("values", 1, val1);
+    });
+    /*close*/
+    
     /*show more filter elements*/
     $(document).on('click', '.catalog__sidebar--show-more', function (event) {
         event.preventDefault();
@@ -285,11 +322,61 @@ $(document).ready(function () {
                 height: '270px'
             });
         } else {
-            $(this).addClass('show-all').text('+ Скрыть');
+            $(this).addClass('show-all').text('- Скрыть');
             parent.css({
                 height: (elHeight + titleHeight) * elLength + 'px'
             });
         }
+    });
+    /*close*/
+    /*refresh all checked items*/
+    $(document).on('click', '.catalog__sidebar--maker .revers', function (e) {//при клике на кнопку "сбросить"
+        event.preventDefault();        
+        item = $(this).parent()//находим все лежащие за кнопкой чекбоксы
+            .nextAll('.catalog__sidebar--element')
+            .find('.catalog__sidebar--checkbox');        
+        if(item.prop('checked') == true){// проверяем, если чекбокс отмечен
+         item.removeAttr("checked");// убираем отметку
+        }     
+    });
+    /*close*/
+    
+    /*catalog slider*/
+    $('.catalog__main--slider').slick({
+        arrows: true,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 770,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 660,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false
+                }
+            }
+        ]
     });
     /*close*/
     /*----------close-----------*/
@@ -404,5 +491,11 @@ $(document).ready(function () {
 
     });
     /*close*/
-
 });
+
+function showSubmenu(selector, selectorClass) {//функция выпадающего списка
+        var CatList = selector.next(selectorClass);//находим необходимый список
+        selector.toggleClass('main-submenu-active');//добавляем/удаляем активный класс
+        CatList.slideToggle(400);//показываем/скрываем список
+        return false;
+}
