@@ -21,7 +21,6 @@
 
         <div class="container">
 
-
             <div class="header__top-links">
 
                 <div class="header__top-links--region">
@@ -42,39 +41,12 @@
 
                 </div>
 
-                <div class="header__top-links--tools">
 
-                    <a href="monetki.html" class="element">
-                        <span class="icon">
-                            <img src="../static/i/icons/coin-icon.png" alt="">
-                        </span>
-                        <span class="counter">99</span>
-                        Монетки <!--(<span class="value">57 026</span>)--></a>
-                    <a href="#" class="element">
-                        <span class="icon"><img src="../static/i/icons/wishlist-icon.png" alt=""></span>
-                        <span class="counter">99</span>
-                        Избранное <!--(<span class="value">9</span>)--></a>
-                    <a href="#" class="element">
-                        <span class="icon"><img src="../static/i/icons/scales-icon.png" alt=""></span>
-                        <span class="counter">99</span>
-                        Сравнение <!--(<span class="value">1</span>)--></a>
-                    <a href="#" class="element">
-                        <span class="icon"><img src="../static/i/icons/basket-icon.png" alt=""></span>
-                        <span class="counter">99</span>
-                        <span class="value">12 350</span>руб.</a>
-
-                </div>
 
                 <div class="header__top-links--cabinet">
 
-                    <a href="#" class="header__top-links--enter">ООО "Ромашка"</a>
-                    <!--<a href="registration.html" class="header__top-links&#45;&#45;enter">Вход</a>-->
-                    <!--<a href="registration.html" class="header__top-links&#45;&#45;enter">Регистрация</a>-->
-
-                    <ul class="header__top-links--cabinet-submenu">
-                        <li><a href="#">Мой профиль</a></li>
-                        <li><a href="#">Выхож</a></li>
-                    </ul>
+                    <a href="authorization.html" class="header__top-links--enter">Вход</a>
+                    <a href="buyer-registration.html" class="header__top-links--enter">Регистрация</a>
 
                 </div>
 
@@ -125,6 +97,8 @@
                         <span><img src="../static/i/icons/search-icon.png" alt=""></span>
                     </button>
 
+
+
                 </form>
 
                 <a href="#" class="partner">
@@ -138,60 +112,41 @@
 
     </div>
 
-    <div class="header__navigation">
-
-        <div class="container">
-
-            <a id="mobile-menu" href="#" class="header__trigger">
-                <span class=""></span>
-            </a>
-
-            <ul class="header__cabinet-nav">
-                <li><a href="orders-page.html">Заказы</a></li>
-                <li><a href="#">Сообщения</a></li>
-                <li><a href="#">Монетки</a></li>
-                <li><a href="#">Любимые магазины</a></li>
-                <li><a href="#">Управление отзывами</a></li>
-                <li><a href="#">Настройки профиля</a></li>
-            </ul>
-
-        </div>
-
-    </div>
-
 </header>
 
 <section class="regist">
 
     <div class="container">
 
-        <div class="regist__thanks">
 
-            <span class="regist__thanks--icon"><img src="../static/i/icons/success-icon.png" alt=""></span>
+        <div class="regist__authorize">
 
-            <h1 class="regist__thanks--title">Ваш заказ успешно оформлен</h1>
+            <label class="regist__form--label" for="login">Логин <span>*</span></label>
+            <input id="login" class="regist__form--field" type="text" placeholder="Укажите логин" required>
 
-            <p class="regist__thanks--subtitle">Номер заказа</p>
+            <label class="regist__form--label" for="password">Пароль <span>*</span></label>
+            <input id="password" class="regist__form--field" type="text" placeholder="Введите пароль" required>
 
-            <p class="regist__thanks--number">H-917 143 781</p>
+            <input id="save-me" class="catalog__sidebar--checkbox" type="checkbox">
+            <label class="catalog__sidebar--forcheck" for="save-me">
+                <span class="catalog__sidebar--checked"></span>
+                <span class="name">Запомнить меня</span>
+            </label>
 
-            <p class="regist__thanks--subtitle">Спасибо, что выбрали интернет-магазин <br> Safe-Shopping.ru!</p>
+            <button class="regist__form--submit" type="submit">Подтвердить</button>
 
-            <span class="regist__thanks--icon"><img src="../static/i/icons/money-box-icon.png" alt=""></span>
+            <div class="regist__authorize--links">
 
-            <p class="regist__thanks--subtitle">А еще в вашу копилку упало 55 монеток, <br>
-                которые можно менять на скидочные купоны</p>
+                <a href="buyer-registration.html" class="regist__authorize--link">Зарегистрироваться</a>
+                <a href="#" class="regist__authorize--link">Забыли пароль?</a>
 
-            <a href="monetki.html" class="regist__thanks--about">Подробне о монетках</a>
+            </div>
 
         </div>
-
-        <a href="orders-page.html" class="regist__thanks--orders">Перейти к моим заказам</a>
 
     </div>
 
 </section>
-
 
 <!-- start footer.html-->
 <footer class="footer">

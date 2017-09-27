@@ -13,9 +13,12 @@
     width: 100%;
     border-bottom: 1px solid #e3e3e3;
     z-index: 2;
-    @include breakpoint(max-width 660px){
+    @include breakpoint(max-width 992px){
       position: relative;
     }
+    /*@include breakpoint(max-width 660px){
+      position: relative;
+    }*/
   }
   &__top-links {
     display: block;
@@ -88,6 +91,9 @@
       background-color: #fff;
       box-shadow: 0 0 6px rgba(1, 1, 1, 0.3);
       z-index: 2;
+      @include breakpoint(max-width 660px){
+        width: 300px;
+      }
       > h3{
         display: block;
         position: relative;

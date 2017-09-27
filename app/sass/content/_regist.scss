@@ -187,7 +187,7 @@
       }
     }
     &--checkbox {
-      display: block;
+      /*display: block;
       position: relative;
       float: left;
       width: 15px;
@@ -195,7 +195,51 @@
       margin-right: 15px;
       margin-bottom: 18px;
       border: 1px solid #dfdfdf;
-      background-color: #ffffff;
+      background-color: #ffffff;*/
+      display: none;
+    }
+    &--checkbox + .regist__form--forcheck{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &--checkbox + .regist__form--forcheck .regist__form--checked{
+      display: block;
+      position: relative;
+      float: left;
+      width: 15px;
+      height: 15px;
+      margin-top: 2px;
+      margin-right: 8px;
+      background-image: url('../i/icons/checkbox-empty-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+    &--checkbox:checked + .regist__form--forcheck .regist__form--checked {
+      background-image: url('../i/icons/checkbox-fill-icon.png');
+    }
+    &--checkbox + .regist__form--forcheck .name {
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - (15px + 8px));
+      color: #0e0e0e;
+      font-size: 14px;
+      font-weight: 300;
+      a{
+        color: #0e0e0e;
+        font-size: 14px;
+        font-weight: 300;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        &:hover{
+          color: #0e0e0e;
+          text-decoration: none;
+        }
+      }
     }
     &--radios {
       display: block;
@@ -625,6 +669,58 @@
       }
       &:hover, &:focus, &:active{
         color: #1179c2;
+        text-decoration: none;
+      }
+    }
+  }
+  &__authorize{
+    display: block;
+    position: relative;
+    float: left;
+    width: 490px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: calc(50% - (490px/2));
+    padding: 20px 32px;
+    @include box-sizing(border-box);
+    border: 1px solid #dddddd;
+    @include breakpoint(max-width 490px){
+      width: 100%;
+      margin-left: 0;
+    }
+    .regist__form--submit{
+      margin-top: 30px;
+    }
+    &--links{
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(space-around);
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      @include breakpoint(max-width 660px){
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+      }
+    }
+    &--link{
+      display: block;
+      position: relative;
+      float: left;
+      color: #0e0e0e;
+      font-size: 16px;
+      font-weight: 400;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      @include breakpoint(max-width 660px){
+        margin-bottom: 15px;
+      }
+      &:hover{
+        color: #0e0e0e;
         text-decoration: none;
       }
     }

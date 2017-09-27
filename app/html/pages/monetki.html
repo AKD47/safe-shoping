@@ -11,6 +11,7 @@
 
                 <div class="header__top-links--region">
                     <span>Ваш регион:</span>
+
                     <a href="#" class="city-select">Москва</a>
 
                     <div class="header__top-links--hover-region">
@@ -52,8 +53,8 @@
                 <div class="header__top-links--cabinet">
 
                     <a href="#" class="header__top-links--enter">ООО "Ромашка"</a>
-                    <!--<a href="#" class="header__top-links&#45;&#45;enter">Вход</a>-->
-                    <!--<a href="#" class="header__top-links&#45;&#45;enter">Регистрация</a>-->
+                    <!--<a href="registration.html" class="header__top-links&#45;&#45;enter">Вход</a>-->
+                    <!--<a href="registration.html" class="header__top-links&#45;&#45;enter">Регистрация</a>-->
 
                     <ul class="header__top-links--cabinet-submenu">
                         <li><a href="#">Мой профиль</a></li>
@@ -67,7 +68,7 @@
 
     </div>
 
-    <section class="search">
+    <div class="header__logo">
 
         <div class="container">
 
@@ -75,48 +76,52 @@
                 <img src="../static/i/OAMI-logo.svg" alt="">
             </a>
 
-            <form class="search__form">
+            <section class="search">
 
-                <input class="search__form--field" type="text" placeholder="Поиск среди товаров">
+                <form class="search__form">
 
-                <div class="search__form--categories">
+                    <input class="search__form--field" type="text" placeholder="Поиск среди товаров">
 
-                    <div class="search__form--trigger">
-                   <span class="search__form--title" data-id="0">
+                    <div class="search__form--categories">
+
+                        <div class="search__form--trigger">
+                            <span class="search__form--title" data-id="0">
                                     Все категории</span>
-                        <span class="search__form--arrow"></span>
+                            <span class="search__form--arrow"></span>
+                        </div>
+                        <ul class="search__form--list">
+                            <li data-id="1">Все для ремонта</li>
+                            <li data-id="2"> Увлечения и хобби</li>
+                            <li data-id="3"> Детские товары</li>
+                            <li data-id="4">Спорт и отдых</li>
+                            <li data-id="5">Красота и здоровье</li>
+                            <li data-id="6">Софт и программы</li>
+                            <li data-id="7">Все для дачи</li>
+                            <li data-id="8">Праздники и торжества</li>
+                            <li data-id="9">Еда и напитки</li>
+                            <li data-id="10">Обувь и сумки</li>
+                            <li data-id="11">Другие категории</li>
+                            <li data-id="12">Скидки и акции</li>
+                        </ul>
+
                     </div>
-                    <ul class="search__form--list">
-                        <li data-id="1">Все для ремонта</li>
-                        <li data-id="2"> Увлечения и хобби</li>
-                        <li data-id="3"> Детские товары</li>
-                        <li data-id="4">Спорт и отдых</li>
-                        <li data-id="5">Красота и здоровье</li>
-                        <li data-id="6">Софт и программы</li>
-                        <li data-id="7">Все для дачи</li>
-                        <li data-id="8">Праздники и торжества</li>
-                        <li data-id="9">Еда и напитки</li>
-                        <li data-id="10">Обувь и сумки</li>
-                        <li data-id="11">Другие категории</li>
-                        <li data-id="12">Скидки и акции</li>
-                    </ul>
 
-                </div>
+                    <button class="search__form--submit" type="submit">
+                        <span><img src="../static/i/icons/search-icon.png" alt=""></span>
+                    </button>
 
-                <button class="search__form--submit" type="submit">
-                    <span><img src="../static/i/icons/search-icon.png" alt=""></span>
-                </button>
+                </form>
 
-            </form>
+                <a href="#" class="partner">
+                    <span><img src="../static/i/icons/shake-hands-icon.png" alt=""></span>
+                    <span>Стать партнером</span>
+                </a>
 
-            <a href="#" class="partner">
-                <span><img src="../static/i/icons/shake-hands-icon.png" alt=""></span>
-                <span>Стать партнером</span>
-            </a>
+            </section>
 
         </div>
 
-    </section>
+    </div>
 
     <div class="header__navigation">
 

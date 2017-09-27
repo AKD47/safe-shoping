@@ -121,3 +121,57 @@
 .gplus{
  color: #db4437;
 }
+.pagination{
+  @include display-flex(flex);
+  @include flex-wrap(wrap);
+  @include flex-direction(row);
+  @include justify-content(flex-end);
+  position: relative;
+  float: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li{
+    position: relative;
+    float: left;
+    .number{
+      display: block;
+      position: relative;
+      float: left;
+      width: 45px;
+      height: 38px;
+      margin: 0 2px;
+      border: 1px solid #e3e3e3;
+      background-color: #ffffff;
+      border-radius: 23px;
+      color: #0e0e0e;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 38px;
+      text-align: center;
+      &:hover{
+        border-color: #c12025;
+        color: #c12025;
+        font-weight: 700;
+      }
+    }
+    .number.active{
+      border-color: #c12025;
+      color: #c12025;
+      font-weight: 700;
+    }
+  }
+  .dots{
+    display: block;
+    position: relative;
+    float: left;
+    width: 20px;
+    height: 38px;
+    margin: 0 2px;
+    color: #0e0e0e;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 38px;
+    text-align: center;
+  }
+}

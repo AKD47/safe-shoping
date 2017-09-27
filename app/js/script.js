@@ -198,7 +198,7 @@ $(document).ready(function () {
         $('.coins__tabs-container--box').hide(0);
         $(tabId).fadeIn();
     });
-    /*close*/  
+    /*close*/
 
     /*main page stock line*/
     if ($('.product__stock--quantity').length > 0) {
@@ -251,37 +251,37 @@ $(document).ready(function () {
     $(document).on('click', '.first-submenu', function (e) {//клик по меню первого уровная
         e.preventDefault();
         var selector = $(this),//элемент, по которуму кликаем
-        selectorClass = $('.main-submenu');// елемент, который нужно показать       
+            selectorClass = $('.main-submenu');// елемент, который нужно показать       
         showSubmenu(selector, selectorClass);//вызываем функцию выпадающего меню
     });
     $(document).on('click', '.second-submenu', function (e) {//клик по меню вторго уровная
-        e.preventDefault();       
+        e.preventDefault();
         var selector = $(this),//элемент, по которуму кликаем
             selectorClass = $('.main-submenu__list');// елемент, который нужно показать    
         showSubmenu(selector, selectorClass);//вызываем функцию выпадающего меню
     });
     $(document).on('click', '.third-submenu', function (e) {//клик по меню третьего уровная
-        e.preventDefault();       
+        e.preventDefault();
         var selector = $(this),//элемент, по которуму кликаем
             selectorClass = $('.main-submenu__list--catalog');// елемент, который нужно показать  
         showSubmenu(selector, selectorClass);//вызываем функцию выпадающего меню
     });
     /*close*/
-    
+
     /*sidebar line filter*/
     $(function () {
 
         var min = parseInt($("input[name='minPrice']").val(), 10);
         var max = parseInt($("input[name='maxPrice']").val(), 10);
         var selMin = $("input[name='minPrice']").attr('selprice');
-        var selMax = parseInt($("input[name='maxPrice']").attr('selprice'), 10);        
-        var number = 3500;        
+        var selMax = parseInt($("input[name='maxPrice']").attr('selprice'), 10);
+        var number = 3500;
 
         $("#slider_price").slider({
             range: true,
             min: min,
             max: max,
-            values: [selMin, selMax],           
+            values: [selMin, selMax],
             slide: function (event, ui) {
                 $("#price").val(ui.values[0]);//Поле минимального значения               
                 $("#price2").val(ui.values[1]); //Поле максимального значения
@@ -308,7 +308,7 @@ $(document).ready(function () {
         $('#slider_price').slider("values", 1, val1);
     });
     /*close*/
-    
+
     /*show more filter elements*/
     $(document).on('click', '.catalog__sidebar--show-more', function (event) {
         event.preventDefault();
@@ -331,16 +331,16 @@ $(document).ready(function () {
     /*close*/
     /*refresh all checked items*/
     $(document).on('click', '.catalog__sidebar--maker .revers', function (e) {//при клике на кнопку "сбросить"
-        event.preventDefault();        
+        event.preventDefault();
         item = $(this).parent()//находим все лежащие за кнопкой чекбоксы
             .nextAll('.catalog__sidebar--element')
-            .find('.catalog__sidebar--checkbox');        
-        if(item.prop('checked') == true){// проверяем, если чекбокс отмечен
-         item.removeAttr("checked");// убираем отметку
-        }     
+            .find('.catalog__sidebar--checkbox');
+        if (item.prop('checked') == true) {// проверяем, если чекбокс отмечен
+            item.removeAttr("checked");// убираем отметку
+        }
     });
     /*close*/
-    
+
     /*catalog slider*/
     $('.catalog__main--slider').slick({
         arrows: true,
@@ -377,6 +377,44 @@ $(document).ready(function () {
                 }
             }
         ]
+    });
+    /*close*/
+
+    /*catalog layots tabs*/
+    $('.catalog__main--tabs-box').each(function (i) {
+        if (i != 0) {
+            $(this).hide(0)
+        }
+    });
+    $(document).on('click', '.catalog__main--tabs a', function (e) {
+        e.preventDefault();
+        var tabId = $(this).attr('href');
+        $('.catalog__main--tabs a').removeClass('active');
+        $(this).addClass('active');
+        $('.catalog__main--tabs-box').hide(0);
+        $(tabId).fadeIn();
+    });
+    /*close*/
+
+    /*show mobile filter*/
+    $(document).on('click', '.catalog__sidebar--trigger', function (e) {
+        e.preventDefault();
+        var background = $(this).closest('.catalog').find('.catalog__bg'),
+            sidebar = $(this).closest('.catalog__sidebar');
+        if ($(this).hasClass('show-sidebar')) {
+            $(this).removeClass('show-sidebar');
+            sidebar.css({left: '-270px'});
+            background.fadeOut('400');
+        } else {
+            $(this).addClass('show-sidebar');
+            sidebar.css({left: '0'});
+            background.fadeIn('400');
+        }
+    });
+    $(document).on('click', '.catalog__sidebar--submit', function (e) {
+        $('.catalog__sidebar--trigger').removeClass('show-sidebar');
+        $(this).closest('.catalog').find('.catalog__sidebar').css({left: '-270px'});
+        $(this).closest('.catalog').find('.catalog__bg').fadeOut('400');
     });
     /*close*/
     /*----------close-----------*/
@@ -494,8 +532,8 @@ $(document).ready(function () {
 });
 
 function showSubmenu(selector, selectorClass) {//функция выпадающего списка
-        var CatList = selector.next(selectorClass);//находим необходимый список
-        selector.toggleClass('main-submenu-active');//добавляем/удаляем активный класс
-        CatList.slideToggle(400);//показываем/скрываем список
-        return false;
+    var CatList = selector.next(selectorClass);//находим необходимый список
+    selector.toggleClass('main-submenu-active');//добавляем/удаляем активный класс
+    CatList.slideToggle(400);//показываем/скрываем список
+    return false;
 }
